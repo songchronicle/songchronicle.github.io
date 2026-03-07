@@ -1,0 +1,1802 @@
+[
+  {
+    "artist": "Агата Кристи",
+    "title": "Как на войне",
+    "year": 1993,
+    "genre": "rock"
+  },
+  {
+    "artist": "Агата Кристи",
+    "title": "Сказочная тайга",
+    "year": 1994,
+    "genre": "rock"
+  },
+  {
+    "artist": "Агата Кристи",
+    "title": "Ковер-вертолет",
+    "year": 1998,
+    "genre": "rock"
+  },
+  {
+    "artist": "Мумий Тролль",
+    "title": "Утекай",
+    "year": 1997,
+    "genre": "rock"
+  },
+  {
+    "artist": "Мумий Тролль",
+    "title": "Владивосток 2000",
+    "year": 1997,
+    "genre": "rock"
+  },
+  {
+    "artist": "Мумий Тролль",
+    "title": "Дельфины",
+    "year": 1997,
+    "genre": "rock"
+  },
+  {
+    "artist": "ДДТ",
+    "title": "Что такое осень",
+    "year": 1991,
+    "genre": "rock"
+  },
+  {
+    "artist": "ДДТ",
+    "title": "Дождь",
+    "year": 1992,
+    "genre": "rock"
+  },
+  {
+    "artist": "ДДТ",
+    "title": "Это всё",
+    "year": 1995,
+    "genre": "rock"
+  },
+  {
+    "artist": "Наутилус Помпилиус",
+    "title": "Прогулки по воде",
+    "year": 1991,
+    "genre": "rock"
+  },
+  {
+    "artist": "Наутилус Помпилиус",
+    "title": "Титаник",
+    "year": 1994,
+    "genre": "rock"
+  },
+  {
+    "artist": "Наутилус Помпилиус",
+    "title": "Крылья",
+    "year": 1995,
+    "genre": "rock"
+  },
+  {
+    "artist": "Чайф",
+    "title": "Не спеши",
+    "year": 1993,
+    "genre": "rock"
+  },
+  {
+    "artist": "Чайф",
+    "title": "Оранжевое настроение",
+    "year": 1994,
+    "genre": "rock"
+  },
+  {
+    "artist": "Чайф",
+    "title": "Аргентина — Ямайка 5:0",
+    "year": 1998,
+    "genre": "rock"
+  },
+  {
+    "artist": "Алиса",
+    "title": "Трасса Е-95",
+    "year": 1997,
+    "genre": "rock"
+  },
+  {
+    "artist": "Алиса",
+    "title": "Веретено",
+    "year": 1998,
+    "genre": "rock"
+  },
+  {
+    "artist": "Алиса",
+    "title": "Родина",
+    "year": 1991,
+    "genre": "rock"
+  },
+  {
+    "artist": "Сплин",
+    "title": "Орбит без сахара",
+    "year": 1998,
+    "genre": "rock"
+  },
+  {
+    "artist": "Сплин",
+    "title": "Выхода нет",
+    "year": 1998,
+    "genre": "rock"
+  },
+  {
+    "artist": "Сплин",
+    "title": "Моё сердце",
+    "year": 1999,
+    "genre": "rock"
+  },
+  {
+    "artist": "Би-2",
+    "title": "Варвара",
+    "year": 1999,
+    "genre": "rock"
+  },
+  {
+    "artist": "Би-2",
+    "title": "Серебро",
+    "year": 1999,
+    "genre": "rock"
+  },
+  {
+    "artist": "Би-2",
+    "title": "Полковнику никто не пишет",
+    "year": 1999,
+    "genre": "rock"
+  },
+  {
+    "artist": "Крематорий",
+    "title": "Мусорный ветер",
+    "year": 1991,
+    "genre": "rock"
+  },
+  {
+    "artist": "Крематорий",
+    "title": "Катманду",
+    "year": 1990,
+    "genre": "rock"
+  },
+  {
+    "artist": "Крематорий",
+    "title": "Безобразная Эльза",
+    "year": 1996,
+    "genre": "rock"
+  },
+  {
+    "artist": "Сектор Газа",
+    "title": "Пора домой",
+    "year": 1990,
+    "genre": "rock"
+  },
+  {
+    "artist": "Сектор Газа",
+    "title": "Лирика",
+    "year": 1997,
+    "genre": "rock"
+  },
+  {
+    "artist": "Сектор Газа",
+    "title": "Туман",
+    "year": 1997,
+    "genre": "rock"
+  },
+  {
+    "artist": "Король и Шут",
+    "title": "Кукла колдуна",
+    "year": 1999,
+    "genre": "punk rock"
+  },
+  {
+    "artist": "Король и Шут",
+    "title": "Прыгну со скалы",
+    "year": 1999,
+    "genre": "punk rock"
+  },
+  {
+    "artist": "Король и Шут",
+    "title": "Лесник",
+    "year": 1996,
+    "genre": "punk rock"
+  },
+  {
+    "artist": "Ногу свело!",
+    "title": "Хару Мамбуру",
+    "year": 1993,
+    "genre": "alternative"
+  },
+  {
+    "artist": "Ногу свело!",
+    "title": "Идём на Восток!",
+    "year": 1999,
+    "genre": "alternative"
+  },
+  {
+    "artist": "Ногу свело!",
+    "title": "Лилипутская любовь",
+    "year": 1997,
+    "genre": "alternative"
+  },
+  {
+    "artist": "Чиж & Co",
+    "title": "О любви",
+    "year": 1994,
+    "genre": "rock"
+  },
+  {
+    "artist": "Чиж & Co",
+    "title": "Вечная молодость",
+    "year": 1997,
+    "genre": "rock"
+  },
+  {
+    "artist": "Чиж & Co",
+    "title": "Фантом",
+    "year": 1996,
+    "genre": "rock"
+  },
+  {
+    "artist": "Калинов мост",
+    "title": "Родная",
+    "year": 1998,
+    "genre": "rock"
+  },
+  {
+    "artist": "Калинов мост",
+    "title": "Уходили из дома",
+    "year": 1991,
+    "genre": "rock"
+  },
+  {
+    "artist": "Калинов мост",
+    "title": "Девочка летом",
+    "year": 1996,
+    "genre": "rock"
+  },
+  {
+    "artist": "Пикник",
+    "title": "Египтянин",
+    "year": 1994,
+    "genre": "rock"
+  },
+  {
+    "artist": "Пикник",
+    "title": "Фиолетово-чёрный",
+    "year": 1996,
+    "genre": "rock"
+  },
+  {
+    "artist": "Пикник",
+    "title": "Немое кино",
+    "year": 1994,
+    "genre": "rock"
+  },
+  {
+    "artist": "Мегаполис",
+    "title": "Karl-Marx-Stadt",
+    "year": 1994,
+    "genre": "rock"
+  },
+  {
+    "artist": "Мегаполис",
+    "title": "Женское сердце",
+    "year": 1995,
+    "genre": "rock"
+  },
+  {
+    "artist": "Мегаполис",
+    "title": "Москвички",
+    "year": 1990,
+    "genre": "rock"
+  },
+  {
+    "artist": "Смысловые галлюцинации",
+    "title": "Вечно молодой",
+    "year": 1999,
+    "genre": "rock"
+  },
+  {
+    "artist": "Смысловые галлюцинации",
+    "title": "Звёзды 3000",
+    "year": 1999,
+    "genre": "rock"
+  },
+  {
+    "artist": "Смысловые галлюцинации",
+    "title": "Розовые очки",
+    "year": 1998,
+    "genre": "rock"
+  },
+  {
+    "artist": "Tequilajazzz",
+    "title": "Зимнее солнце",
+    "year": 1998,
+    "genre": "alternative"
+  },
+  {
+    "artist": "Tequilajazzz",
+    "title": "Кроме звёзд",
+    "year": 1998,
+    "genre": "alternative"
+  },
+  {
+    "artist": "Tequilajazzz",
+    "title": "Стратосфера",
+    "year": 1999,
+    "genre": "alternative"
+  },
+  {
+    "artist": "Моральный кодекс",
+    "title": "До свиданья, мама",
+    "year": 1991,
+    "genre": "rock"
+  },
+  {
+    "artist": "Моральный кодекс",
+    "title": "Первый снег",
+    "year": 1993,
+    "genre": "rock"
+  },
+  {
+    "artist": "Моральный кодекс",
+    "title": "Я тебя люблю",
+    "year": 1996,
+    "genre": "rock"
+  },
+  {
+    "artist": "Танцы Минус",
+    "title": "Город",
+    "year": 1999,
+    "genre": "rock"
+  },
+  {
+    "artist": "Танцы Минус",
+    "title": "Половинка",
+    "year": 1999,
+    "genre": "rock"
+  },
+  {
+    "artist": "Танцы Минус",
+    "title": "10 капель",
+    "year": 1999,
+    "genre": "rock"
+  },
+  {
+    "artist": "Земфира",
+    "title": "СПИД",
+    "year": 1999,
+    "genre": "rock"
+  },
+  {
+    "artist": "Земфира",
+    "title": "Ариведерчи",
+    "year": 1999,
+    "genre": "rock"
+  },
+  {
+    "artist": "Земфира",
+    "title": "Ромашки",
+    "year": 1999,
+    "genre": "rock"
+  },
+  {
+    "artist": "Ва-Банкъ",
+    "title": "Эльдорадо",
+    "year": 1992,
+    "genre": "rock"
+  },
+  {
+    "artist": "Ва-Банкъ",
+    "title": "Маршруты московские",
+    "year": 1991,
+    "genre": "rock"
+  },
+  {
+    "artist": "Ва-Банкъ",
+    "title": "На кухне",
+    "year": 1992,
+    "genre": "rock"
+  },
+  {
+    "artist": "Неприкасаемые",
+    "title": "Напои меня водой",
+    "year": 1998,
+    "genre": "rock"
+  },
+  {
+    "artist": "Неприкасаемые",
+    "title": "Ольга",
+    "year": 1994,
+    "genre": "rock"
+  },
+  {
+    "artist": "Неприкасаемые",
+    "title": "Белая дорога",
+    "year": 1996,
+    "genre": "rock"
+  },
+  {
+    "artist": "Маша и Медведи",
+    "title": "Любочка",
+    "year": 1997,
+    "genre": "alternative"
+  },
+  {
+    "artist": "Маша и Медведи",
+    "title": "Земля",
+    "year": 1997,
+    "genre": "alternative"
+  },
+  {
+    "artist": "Маша и Медведи",
+    "title": "Рейкьявик",
+    "year": 1997,
+    "genre": "alternative"
+  },
+  {
+    "artist": "7Б",
+    "title": "Молодые ветра",
+    "year": 1999,
+    "genre": "rock"
+  },
+  {
+    "artist": "7Б",
+    "title": "Осень",
+    "year": 1999,
+    "genre": "rock"
+  },
+  {
+    "artist": "7Б",
+    "title": "Ночь на экране",
+    "year": 1999,
+    "genre": "rock"
+  },
+  {
+    "artist": "Запрещённые барабанщики",
+    "title": "Убили негра",
+    "year": 1999,
+    "genre": "rock"
+  },
+  {
+    "artist": "Запрещённые барабанщики",
+    "title": "Мама Зузу",
+    "year": 1999,
+    "genre": "rock"
+  },
+  {
+    "artist": "Запрещённые барабанщики",
+    "title": "Таблетка",
+    "year": 1999,
+    "genre": "rock"
+  },
+  {
+    "artist": "Мальчишник",
+    "title": "Секс без перерыва",
+    "year": 1992,
+    "genre": "hip-hop"
+  },
+  {
+    "artist": "Мальчишник",
+    "title": "Ночь",
+    "year": 1993,
+    "genre": "hip-hop"
+  },
+  {
+    "artist": "Мальчишник",
+    "title": "Я хочу тебя",
+    "year": 1993,
+    "genre": "hip-hop"
+  },
+  {
+    "artist": "Линда",
+    "title": "Мало огня",
+    "year": 1994,
+    "genre": "alternative"
+  },
+  {
+    "artist": "Линда",
+    "title": "Ворона",
+    "year": 1996,
+    "genre": "alternative"
+  },
+  {
+    "artist": "Линда",
+    "title": "Цепи и кольца",
+    "year": 1997,
+    "genre": "alternative"
+  },
+  {
+    "artist": "Руки Вверх!",
+    "title": "Малыш",
+    "year": 1998,
+    "genre": "pop"
+  },
+  {
+    "artist": "Руки Вверх!",
+    "title": "18 мне уже",
+    "year": 1998,
+    "genre": "pop"
+  },
+  {
+    "artist": "Руки Вверх!",
+    "title": "Крошка моя",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "Иванушки International",
+    "title": "Тучи",
+    "year": 1996,
+    "genre": "pop"
+  },
+  {
+    "artist": "Иванушки International",
+    "title": "Кукла",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "Иванушки International",
+    "title": "Тополиный пух",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "На-На",
+    "title": "Фаина",
+    "year": 1992,
+    "genre": "pop"
+  },
+  {
+    "artist": "На-На",
+    "title": "Упала шляпа",
+    "year": 1991,
+    "genre": "pop"
+  },
+  {
+    "artist": "На-На",
+    "title": "Красивая",
+    "year": 1996,
+    "genre": "pop"
+  },
+  {
+    "artist": "Кар-Мэн",
+    "title": "Лондон, гудбай",
+    "year": 1991,
+    "genre": "dance-pop"
+  },
+  {
+    "artist": "Кар-Мэн",
+    "title": "Чао, бамбино",
+    "year": 1991,
+    "genre": "dance-pop"
+  },
+  {
+    "artist": "Кар-Мэн",
+    "title": "Багама-мама",
+    "year": 1992,
+    "genre": "dance-pop"
+  },
+  {
+    "artist": "Технология",
+    "title": "Нажми на кнопку",
+    "year": 1991,
+    "genre": "synth-pop"
+  },
+  {
+    "artist": "Технология",
+    "title": "Странные танцы",
+    "year": 1991,
+    "genre": "synth-pop"
+  },
+  {
+    "artist": "Технология",
+    "title": "Полчаса",
+    "year": 1991,
+    "genre": "synth-pop"
+  },
+  {
+    "artist": "Любэ",
+    "title": "Конь",
+    "year": 1994,
+    "genre": "rock"
+  },
+  {
+    "artist": "Любэ",
+    "title": "Комбат",
+    "year": 1995,
+    "genre": "rock"
+  },
+  {
+    "artist": "Любэ",
+    "title": "Там, за туманами",
+    "year": 1997,
+    "genre": "rock"
+  },
+  {
+    "artist": "Браво",
+    "title": "Этот город",
+    "year": 1994,
+    "genre": "rock"
+  },
+  {
+    "artist": "Браво",
+    "title": "Дорога в облака",
+    "year": 1994,
+    "genre": "rock"
+  },
+  {
+    "artist": "Браво",
+    "title": "Любите, девушки",
+    "year": 1995,
+    "genre": "rock"
+  },
+  {
+    "artist": "A’Studio",
+    "title": "Джулия",
+    "year": 1991,
+    "genre": "pop"
+  },
+  {
+    "artist": "A’Studio",
+    "title": "Нелюбимая",
+    "year": 1995,
+    "genre": "pop"
+  },
+  {
+    "artist": "A’Studio",
+    "title": "Солдат любви",
+    "year": 1997,
+    "genre": "pop"
+  },
+  {
+    "artist": "Отпетые мошенники",
+    "title": "Люби меня, люби",
+    "year": 1998,
+    "genre": "pop"
+  },
+  {
+    "artist": "Отпетые мошенники",
+    "title": "Всяко-разно",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "Отпетые мошенники",
+    "title": "Девушки бывают разные",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "Демо",
+    "title": "Солнышко",
+    "year": 1999,
+    "genre": "dance-pop"
+  },
+  {
+    "artist": "Демо",
+    "title": "2000 лет",
+    "year": 1999,
+    "genre": "dance-pop"
+  },
+  {
+    "artist": "Демо",
+    "title": "Я не знаю",
+    "year": 1999,
+    "genre": "dance-pop"
+  },
+  {
+    "artist": "Гости из будущего",
+    "title": "Беги от меня",
+    "year": 1999,
+    "genre": "electronic"
+  },
+  {
+    "artist": "Гости из будущего",
+    "title": "Нелюбовь",
+    "year": 1999,
+    "genre": "electronic"
+  },
+  {
+    "artist": "Гости из будущего",
+    "title": "Зима в сердце",
+    "year": 1999,
+    "genre": "electronic"
+  },
+  {
+    "artist": "Hi-Fi",
+    "title": "Не дано",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "Hi-Fi",
+    "title": "Беспризорник",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "Hi-Fi",
+    "title": "Черный ворон",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "Валерий Меладзе",
+    "title": "Сэра",
+    "year": 1995,
+    "genre": "pop"
+  },
+  {
+    "artist": "Валерий Меладзе",
+    "title": "Самба белого мотылька",
+    "year": 1998,
+    "genre": "pop"
+  },
+  {
+    "artist": "Валерий Меладзе",
+    "title": "Ночь накануне Рождества",
+    "year": 1998,
+    "genre": "pop"
+  },
+  {
+    "artist": "Филипп Киркоров",
+    "title": "Зайка моя",
+    "year": 1995,
+    "genre": "pop"
+  },
+  {
+    "artist": "Филипп Киркоров",
+    "title": "Единственная моя",
+    "year": 1997,
+    "genre": "pop"
+  },
+  {
+    "artist": "Филипп Киркоров",
+    "title": "Шика дам",
+    "year": 1998,
+    "genre": "pop"
+  },
+  {
+    "artist": "Алла Пугачёва",
+    "title": "Настоящий полковник",
+    "year": 1995,
+    "genre": "pop"
+  },
+  {
+    "artist": "Алла Пугачёва",
+    "title": "Позови меня с собой",
+    "year": 1997,
+    "genre": "pop"
+  },
+  {
+    "artist": "Алла Пугачёва",
+    "title": "Примадонна",
+    "year": 1997,
+    "genre": "pop"
+  },
+  {
+    "artist": "Игорь Николаев",
+    "title": "Выпьем за любовь",
+    "year": 1995,
+    "genre": "pop"
+  },
+  {
+    "artist": "Игорь Николаев",
+    "title": "Пять причин",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "Игорь Николаев",
+    "title": "Такси, такси",
+    "year": 1992,
+    "genre": "pop"
+  },
+  {
+    "artist": "Наташа Королёва",
+    "title": "Жёлтые тюльпаны",
+    "year": 1990,
+    "genre": "pop"
+  },
+  {
+    "artist": "Наташа Королёва",
+    "title": "Маленькая страна",
+    "year": 1995,
+    "genre": "pop"
+  },
+  {
+    "artist": "Наташа Королёва",
+    "title": "Конфетти",
+    "year": 1994,
+    "genre": "pop"
+  },
+  {
+    "artist": "Леонид Агутин",
+    "title": "Хоп хей лала-лей",
+    "year": 1994,
+    "genre": "pop"
+  },
+  {
+    "artist": "Леонид Агутин",
+    "title": "Голос высокой травы",
+    "year": 1995,
+    "genre": "pop"
+  },
+  {
+    "artist": "Леонид Агутин",
+    "title": "На сиреневой луне",
+    "year": 1998,
+    "genre": "pop"
+  },
+  {
+    "artist": "Анжелика Варум",
+    "title": "Ля-ля-фа",
+    "year": 1993,
+    "genre": "pop"
+  },
+  {
+    "artist": "Анжелика Варум",
+    "title": "Городок",
+    "year": 1994,
+    "genre": "pop"
+  },
+  {
+    "artist": "Анжелика Варум",
+    "title": "Зимняя вишня",
+    "year": 1996,
+    "genre": "pop"
+  },
+  {
+    "artist": "Лицей",
+    "title": "Осень",
+    "year": 1996,
+    "genre": "pop"
+  },
+  {
+    "artist": "Лицей",
+    "title": "Как ты о нём мечтала",
+    "year": 1997,
+    "genre": "pop"
+  },
+  {
+    "artist": "Лицей",
+    "title": "Паровозик-облачко",
+    "year": 1996,
+    "genre": "pop"
+  },
+  {
+    "artist": "Комбинация",
+    "title": "Бухгалтер",
+    "year": 1991,
+    "genre": "pop"
+  },
+  {
+    "artist": "Комбинация",
+    "title": "Два кусочека колбаски",
+    "year": 1993,
+    "genre": "pop"
+  },
+  {
+    "artist": "Комбинация",
+    "title": "Американ бой",
+    "year": 1991,
+    "genre": "pop"
+  },
+  {
+    "artist": "Вирус!",
+    "title": "Ты меня не ищи",
+    "year": 1999,
+    "genre": "dance-pop"
+  },
+  {
+    "artist": "Вирус!",
+    "title": "Попрошу тебя",
+    "year": 1999,
+    "genre": "dance-pop"
+  },
+  {
+    "artist": "Вирус!",
+    "title": "Ручки",
+    "year": 1999,
+    "genre": "dance-pop"
+  },
+  {
+    "artist": "t.A.T.u.",
+    "title": "Я сошла с ума",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "t.A.T.u.",
+    "title": "Нас не догонят",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "t.A.T.u.",
+    "title": "30 минут",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "Лада Дэнс",
+    "title": "Девочка-ночь",
+    "year": 1993,
+    "genre": "pop"
+  },
+  {
+    "artist": "Лада Дэнс",
+    "title": "Жить нужно в кайф",
+    "year": 1993,
+    "genre": "pop"
+  },
+  {
+    "artist": "Лада Дэнс",
+    "title": "Аромат любви",
+    "year": 1997,
+    "genre": "pop"
+  },
+  {
+    "artist": "Божья коровка",
+    "title": "Гранитный камушек",
+    "year": 1995,
+    "genre": "pop"
+  },
+  {
+    "artist": "Божья коровка",
+    "title": "Теплоход",
+    "year": 1996,
+    "genre": "pop"
+  },
+  {
+    "artist": "Божья коровка",
+    "title": "Ягода-малинка",
+    "year": 1997,
+    "genre": "pop"
+  },
+  {
+    "artist": "Игорь Саруханов",
+    "title": "Скрипка-лиса",
+    "year": 1997,
+    "genre": "pop"
+  },
+  {
+    "artist": "Игорь Саруханов",
+    "title": "Зелёные глаза",
+    "year": 1993,
+    "genre": "pop"
+  },
+  {
+    "artist": "Игорь Саруханов",
+    "title": "Лодочка",
+    "year": 1991,
+    "genre": "pop"
+  },
+  {
+    "artist": "Александр Буйнов",
+    "title": "Пустой бамбук",
+    "year": 1993,
+    "genre": "pop"
+  },
+  {
+    "artist": "Александр Буйнов",
+    "title": "Мои финансы поют романсы",
+    "year": 1997,
+    "genre": "pop"
+  },
+  {
+    "artist": "Александр Буйнов",
+    "title": "Падают листья",
+    "year": 1995,
+    "genre": "pop"
+  },
+  {
+    "artist": "Олег Газманов",
+    "title": "Есаул",
+    "year": 1991,
+    "genre": "pop"
+  },
+  {
+    "artist": "Олег Газманов",
+    "title": "Офицеры",
+    "year": 1991,
+    "genre": "pop"
+  },
+  {
+    "artist": "Олег Газманов",
+    "title": "Москва",
+    "year": 1997,
+    "genre": "pop"
+  },
+  {
+    "artist": "Кристина Орбакайте",
+    "title": "Вербочки",
+    "year": 1996,
+    "genre": "pop"
+  },
+  {
+    "artist": "Кристина Орбакайте",
+    "title": "Май",
+    "year": 1997,
+    "genre": "pop"
+  },
+  {
+    "artist": "Кристина Орбакайте",
+    "title": "Без тебя",
+    "year": 1996,
+    "genre": "pop"
+  },
+  {
+    "artist": "Алена Апина",
+    "title": "Ксюша",
+    "year": 1991,
+    "genre": "pop"
+  },
+  {
+    "artist": "Алена Апина",
+    "title": "Узелки",
+    "year": 1995,
+    "genre": "pop"
+  },
+  {
+    "artist": "Алена Апина",
+    "title": "Электричка",
+    "year": 1997,
+    "genre": "pop"
+  },
+  {
+    "artist": "Татьяна Буланова",
+    "title": "Не плачь",
+    "year": 1991,
+    "genre": "pop"
+  },
+  {
+    "artist": "Татьяна Буланова",
+    "title": "Ясный мой свет",
+    "year": 1996,
+    "genre": "pop"
+  },
+  {
+    "artist": "Татьяна Буланова",
+    "title": "Мой ненаглядный",
+    "year": 1997,
+    "genre": "pop"
+  },
+  {
+    "artist": "Ирина Аллегрова",
+    "title": "Странник",
+    "year": 1992,
+    "genre": "pop"
+  },
+  {
+    "artist": "Ирина Аллегрова",
+    "title": "Угонщица",
+    "year": 1994,
+    "genre": "pop"
+  },
+  {
+    "artist": "Ирина Аллегрова",
+    "title": "Императрица",
+    "year": 1998,
+    "genre": "pop"
+  },
+  {
+    "artist": "Лариса Долина",
+    "title": "Погода в доме",
+    "year": 1997,
+    "genre": "pop"
+  },
+  {
+    "artist": "Лариса Долина",
+    "title": "Ресторан",
+    "year": 1993,
+    "genre": "pop"
+  },
+  {
+    "artist": "Лариса Долина",
+    "title": "Я не нравлюсь себе",
+    "year": 1995,
+    "genre": "pop"
+  },
+  {
+    "artist": "София Ротару",
+    "title": "Хуторянка",
+    "year": 1995,
+    "genre": "pop"
+  },
+  {
+    "artist": "София Ротару",
+    "title": "Лаванда",
+    "year": 1990,
+    "genre": "pop"
+  },
+  {
+    "artist": "София Ротару",
+    "title": "Ночной мотылёк",
+    "year": 1998,
+    "genre": "pop"
+  },
+  {
+    "artist": "Александр Малинин",
+    "title": "Берега",
+    "year": 1990,
+    "genre": "pop"
+  },
+  {
+    "artist": "Александр Малинин",
+    "title": "Поручик Голицын",
+    "year": 1991,
+    "genre": "pop"
+  },
+  {
+    "artist": "Александр Малинин",
+    "title": "Напрасные слова",
+    "year": 1994,
+    "genre": "pop"
+  },
+  {
+    "artist": "Андрей Губин",
+    "title": "Мальчик-бродяга",
+    "year": 1995,
+    "genre": "pop"
+  },
+  {
+    "artist": "Андрей Губин",
+    "title": "Зима-холода",
+    "year": 1998,
+    "genre": "pop"
+  },
+  {
+    "artist": "Андрей Губин",
+    "title": "Ночь",
+    "year": 1998,
+    "genre": "pop"
+  },
+  {
+    "artist": "Дмитрий Маликов",
+    "title": "Ты одна, ты такая",
+    "year": 1996,
+    "genre": "pop"
+  },
+  {
+    "artist": "Дмитрий Маликов",
+    "title": "Сторона родная",
+    "year": 1992,
+    "genre": "pop"
+  },
+  {
+    "artist": "Дмитрий Маликов",
+    "title": "Звезда моя далёкая",
+    "year": 1998,
+    "genre": "pop"
+  },
+  {
+    "artist": "Шура",
+    "title": "Холодная луна",
+    "year": 1997,
+    "genre": "pop"
+  },
+  {
+    "artist": "Шура",
+    "title": "Ты не верь слезам",
+    "year": 1998,
+    "genre": "pop"
+  },
+  {
+    "artist": "Шура",
+    "title": "Твори добро",
+    "year": 1998,
+    "genre": "pop"
+  },
+  {
+    "artist": "Кай Метов",
+    "title": "Position №2",
+    "year": 1994,
+    "genre": "pop"
+  },
+  {
+    "artist": "Кай Метов",
+    "title": "Вспомни меня",
+    "year": 1995,
+    "genre": "pop"
+  },
+  {
+    "artist": "Кай Метов",
+    "title": "Где-то далеко идут дожди",
+    "year": 1996,
+    "genre": "pop"
+  },
+  {
+    "artist": "Влад Сташевский",
+    "title": "Любовь здесь больше не живёт",
+    "year": 1994,
+    "genre": "pop"
+  },
+  {
+    "artist": "Влад Сташевский",
+    "title": "Позови меня в ночи",
+    "year": 1995,
+    "genre": "pop"
+  },
+  {
+    "artist": "Влад Сташевский",
+    "title": "Глаза чайного цвета",
+    "year": 1996,
+    "genre": "pop"
+  },
+  {
+    "artist": "Натали",
+    "title": "Ветер с моря дул",
+    "year": 1997,
+    "genre": "pop"
+  },
+  {
+    "artist": "Натали",
+    "title": "Черепашка",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "Натали",
+    "title": "Снежная роза",
+    "year": 1998,
+    "genre": "pop"
+  },
+  {
+    "artist": "Жасмин",
+    "title": "Так бывает",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "Жасмин",
+    "title": "Долгие дни",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "Жасмин",
+    "title": "Перепишу любовь",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "Алсу",
+    "title": "Зимний сон",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "Алсу",
+    "title": "Иногда",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "Алсу",
+    "title": "Весна",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "Николай Трубач",
+    "title": "Голубая луна",
+    "year": 1998,
+    "genre": "pop"
+  },
+  {
+    "artist": "Николай Трубач",
+    "title": "Пять минут",
+    "year": 1997,
+    "genre": "pop"
+  },
+  {
+    "artist": "Николай Трубач",
+    "title": "Женская любовь",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "Борис Моисеев",
+    "title": "Голубая луна",
+    "year": 1998,
+    "genre": "pop"
+  },
+  {
+    "artist": "Борис Моисеев",
+    "title": "Петербург-Ленинград",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "Борис Моисеев",
+    "title": "Глухонемая любовь",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "Стрелки",
+    "title": "Ты бросил меня",
+    "year": 1997,
+    "genre": "pop"
+  },
+  {
+    "artist": "Стрелки",
+    "title": "На вечеринке",
+    "year": 1998,
+    "genre": "pop"
+  },
+  {
+    "artist": "Стрелки",
+    "title": "Красавчик",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "Русский Размер",
+    "title": "Ю-а-ю",
+    "year": 1994,
+    "genre": "dance-pop"
+  },
+  {
+    "artist": "Русский Размер",
+    "title": "Вот так",
+    "year": 1996,
+    "genre": "dance-pop"
+  },
+  {
+    "artist": "Русский Размер",
+    "title": "Ангел дня",
+    "year": 1999,
+    "genre": "dance-pop"
+  },
+  {
+    "artist": "Турбомода",
+    "title": "Школа",
+    "year": 1999,
+    "genre": "dance-pop"
+  },
+  {
+    "artist": "Турбомода",
+    "title": "Лето",
+    "year": 1999,
+    "genre": "dance-pop"
+  },
+  {
+    "artist": "Турбомода",
+    "title": "Позови",
+    "year": 1999,
+    "genre": "dance-pop"
+  },
+  {
+    "artist": "Нэнси",
+    "title": "Дым сигарет с ментолом",
+    "year": 1993,
+    "genre": "pop"
+  },
+  {
+    "artist": "Нэнси",
+    "title": "Чистый лист",
+    "year": 1995,
+    "genre": "pop"
+  },
+  {
+    "artist": "Нэнси",
+    "title": "Отель",
+    "year": 1998,
+    "genre": "pop"
+  },
+  {
+    "artist": "Комиссар",
+    "title": "Ты уйдёшь",
+    "year": 1991,
+    "genre": "pop"
+  },
+  {
+    "artist": "Комиссар",
+    "title": "Твой поцелуй",
+    "year": 1991,
+    "genre": "pop"
+  },
+  {
+    "artist": "Комиссар",
+    "title": "Дрянь",
+    "year": 1998,
+    "genre": "pop"
+  },
+  {
+    "artist": "Блестящие",
+    "title": "Там, только там",
+    "year": 1997,
+    "genre": "pop"
+  },
+  {
+    "artist": "Блестящие",
+    "title": "Чао, бамбино",
+    "year": 1998,
+    "genre": "pop"
+  },
+  {
+    "artist": "Блестящие",
+    "title": "За четыре моря",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "Леприконсы",
+    "title": "Хали-гали, паратрупер",
+    "year": 1999,
+    "genre": "rock"
+  },
+  {
+    "artist": "Леприконсы",
+    "title": "Девчонки полюбили не меня",
+    "year": 1999,
+    "genre": "rock"
+  },
+  {
+    "artist": "Леприконсы",
+    "title": "Тополя",
+    "year": 1999,
+    "genre": "rock"
+  },
+  {
+    "artist": "Сергей Чумаков",
+    "title": "Жених",
+    "year": 1992,
+    "genre": "pop"
+  },
+  {
+    "artist": "Сергей Чумаков",
+    "title": "От весны до весны",
+    "year": 1994,
+    "genre": "pop"
+  },
+  {
+    "artist": "Сергей Чумаков",
+    "title": "Гадюка",
+    "year": 1993,
+    "genre": "pop"
+  },
+  {
+    "artist": "Профессор Лебединский",
+    "title": "Я убью тебя, лодочник",
+    "year": 1995,
+    "genre": "pop"
+  },
+  {
+    "artist": "Профессор Лебединский",
+    "title": "Бесса мэ",
+    "year": 1996,
+    "genre": "pop"
+  },
+  {
+    "artist": "Профессор Лебединский",
+    "title": "Я танцую пьяный на столе",
+    "year": 1997,
+    "genre": "pop"
+  },
+  {
+    "artist": "Марина Хлебникова",
+    "title": "Чашка кофею",
+    "year": 1997,
+    "genre": "pop"
+  },
+  {
+    "artist": "Марина Хлебникова",
+    "title": "Дожди",
+    "year": 1996,
+    "genre": "pop"
+  },
+  {
+    "artist": "Марина Хлебникова",
+    "title": "Солнышко моё, вставай",
+    "year": 1998,
+    "genre": "pop"
+  },
+  {
+    "artist": "Мурат Насыров",
+    "title": "Мальчик хочет в Тамбов",
+    "year": 1997,
+    "genre": "pop"
+  },
+  {
+    "artist": "Мурат Насыров",
+    "title": "Я — это ты",
+    "year": 1998,
+    "genre": "pop"
+  },
+  {
+    "artist": "Мурат Насыров",
+    "title": "Кто-то простит",
+    "year": 1998,
+    "genre": "pop"
+  },
+  {
+    "artist": "Ирина Салтыкова",
+    "title": "Серые глаза",
+    "year": 1995,
+    "genre": "pop"
+  },
+  {
+    "artist": "Ирина Салтыкова",
+    "title": "Голубые глазки",
+    "year": 1996,
+    "genre": "pop"
+  },
+  {
+    "artist": "Ирина Салтыкова",
+    "title": "Да и нет",
+    "year": 1997,
+    "genre": "pop"
+  },
+  {
+    "artist": "Татьяна Овсиенко",
+    "title": "Капитан",
+    "year": 1993,
+    "genre": "pop"
+  },
+  {
+    "artist": "Татьяна Овсиенко",
+    "title": "Женское счастье",
+    "year": 1995,
+    "genre": "pop"
+  },
+  {
+    "artist": "Татьяна Овсиенко",
+    "title": "Дальнобойщик",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "Алена Свиридова",
+    "title": "Розовый фламинго",
+    "year": 1994,
+    "genre": "pop"
+  },
+  {
+    "artist": "Алена Свиридова",
+    "title": "Никто-никогда",
+    "year": 1993,
+    "genre": "pop"
+  },
+  {
+    "artist": "Алена Свиридова",
+    "title": "Бедная овечка",
+    "year": 1998,
+    "genre": "pop"
+  },
+  {
+    "artist": "Богдан Титомир",
+    "title": "Делай как я",
+    "year": 1991,
+    "genre": "hip-hop"
+  },
+  {
+    "artist": "Богдан Титомир",
+    "title": "Девочка в красном",
+    "year": 1992,
+    "genre": "hip-hop"
+  },
+  {
+    "artist": "Богдан Титомир",
+    "title": "Какая мне разница",
+    "year": 1993,
+    "genre": "hip-hop"
+  },
+  {
+    "artist": "Михей и Джуманджи",
+    "title": "Сука-любовь",
+    "year": 1999,
+    "genre": "soul"
+  },
+  {
+    "artist": "Михей и Джуманджи",
+    "title": "Туда",
+    "year": 1999,
+    "genre": "soul"
+  },
+  {
+    "artist": "Михей и Джуманджи",
+    "title": "Мама",
+    "year": 1999,
+    "genre": "soul"
+  },
+  {
+    "artist": "Океан Ельзи",
+    "title": "Там, де нас нема",
+    "year": 1998,
+    "genre": "rock"
+  },
+  {
+    "artist": "Океан Ельзи",
+    "title": "Відпусти",
+    "year": 1998,
+    "genre": "rock"
+  },
+  {
+    "artist": "Океан Ельзи",
+    "title": "Сосни",
+    "year": 1998,
+    "genre": "rock"
+  },
+  {
+    "artist": "Воплі Відоплясова",
+    "title": "Танці",
+    "year": 1990,
+    "genre": "rock"
+  },
+  {
+    "artist": "Воплі Відоплясова",
+    "title": "Весна",
+    "year": 1997,
+    "genre": "rock"
+  },
+  {
+    "artist": "Воплі Відоплясова",
+    "title": "День народження",
+    "year": 1996,
+    "genre": "rock"
+  },
+  {
+    "artist": "Ляпис Трубецкой",
+    "title": "Ау",
+    "year": 1998,
+    "genre": "rock"
+  },
+  {
+    "artist": "Ляпис Трубецкой",
+    "title": "Ты кинула",
+    "year": 1998,
+    "genre": "rock"
+  },
+  {
+    "artist": "Ляпис Трубецкой",
+    "title": "Евпатория",
+    "year": 1999,
+    "genre": "rock"
+  },
+  {
+    "artist": "Вика Цыганова",
+    "title": "Русская водка",
+    "year": 1994,
+    "genre": "pop"
+  },
+  {
+    "artist": "Вика Цыганова",
+    "title": "Любовь и смерть",
+    "year": 1995,
+    "genre": "pop"
+  },
+  {
+    "artist": "Вика Цыганова",
+    "title": "Приходите в мой дом",
+    "year": 1997,
+    "genre": "pop"
+  },
+  {
+    "artist": "Михаил Круг",
+    "title": "Владимирский централ",
+    "year": 1998,
+    "genre": "chanson"
+  },
+  {
+    "artist": "Михаил Круг",
+    "title": "Кольщик",
+    "year": 1994,
+    "genre": "chanson"
+  },
+  {
+    "artist": "Михаил Круг",
+    "title": "Девочка-пай",
+    "year": 1994,
+    "genre": "chanson"
+  },
+  {
+    "artist": "Светлана Владимирская",
+    "title": "Мальчик мой",
+    "year": 1993,
+    "genre": "pop"
+  },
+  {
+    "artist": "Светлана Владимирская",
+    "title": "Город солнца",
+    "year": 1994,
+    "genre": "pop"
+  },
+  {
+    "artist": "Светлана Владимирская",
+    "title": "Дави на газ",
+    "year": 1995,
+    "genre": "pop"
+  },
+  {
+    "artist": "Диана",
+    "title": "Не целуй её",
+    "year": 1997,
+    "genre": "pop"
+  },
+  {
+    "artist": "Диана",
+    "title": "Я люблю тебя",
+    "year": 1998,
+    "genre": "pop"
+  },
+  {
+    "artist": "Диана",
+    "title": "Расскажи",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "Диана Гурцкая",
+    "title": "Ты здесь",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "Диана Гурцкая",
+    "title": "Волшебное стекло",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "Диана Гурцкая",
+    "title": "Ромео и Джульетта",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "Валерия",
+    "title": "Самолёт",
+    "year": 1999,
+    "genre": "pop"
+  },
+  {
+    "artist": "Валерия",
+    "title": "Обычные дела",
+    "year": 1997,
+    "genre": "pop"
+  },
+  {
+    "artist": "Валерия",
+    "title": "Метелица",
+    "year": 1998,
+    "genre": "pop"
+  },
+  {
+    "artist": "Мистер Малой",
+    "title": "Буду погибать молодым",
+    "year": 1992,
+    "genre": "hip-hop"
+  },
+  {
+    "artist": "Мистер Малой",
+    "title": "Девочка моя",
+    "year": 1993,
+    "genre": "hip-hop"
+  },
+  {
+    "artist": "Мистер Малой",
+    "title": "Лови кураж",
+    "year": 1994,
+    "genre": "hip-hop"
+  },
+  {
+    "artist": "Мистер Кредо",
+    "title": "Чудная долина",
+    "year": 1999,
+    "genre": "dance-pop"
+  },
+  {
+    "artist": "Мистер Кредо",
+    "title": "Медляк",
+    "year": 1999,
+    "genre": "dance-pop"
+  },
+  {
+    "artist": "Мистер Кредо",
+    "title": "Гармония",
+    "year": 1999,
+    "genre": "dance-pop"
+  }
+]
