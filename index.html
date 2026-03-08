@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Song Year Game</title>
+  <style>
+    :root {
+      --bg: #000000;
+      --text: #f2f2f2;
+      --muted: #b8b8b8;
+      --border: #6f6f6f;
+      --accent: #16b3b5;
+      --accent-2: #7d5cff;
+      --success: #37b114;
+      --danger: #d9534f;
+      --card-radius: 26px;
+      --control-radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    .app {
+      max-width: 1700px;
+      margin: 0 auto;
+      padding: 34px 42px 48px;
+    }
+
+    .top-info {
+      font-size: clamp(24px, 3.1vw, 56px);
+      color: var(--muted);
+      margin: 8px 0 28px;
+    }
+
+    .screen {
+      border: 6px solid var(--border);
+      border-radius: 26px;
+      padding: 30px 34px 44px;
+      min-height: 610px;
+    }
+
+    .hidden { display: none !important; }
+
+    h1, h2, h3, p { margin: 0; }
+
+    .title {
+      font-size: clamp(30px, 3.2vw, 62px);
+      margin-bottom: 48px;
+      font-weight: 400;
+    }
+
+    .setup-grid {
+      display: grid;
+      grid-template-columns: 140px minmax(180px, 420px) 80px minmax(180px, 420px);
+      gap: 34px 28px;
+      align-items: center;
+      max-width: 1160px;
+      margin-bottom: 70px;
+    }
+
+    .setup-grid .label {
+      font-size: clamp(28px, 2.6vw, 60px);
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    .input {
+      width: 100%;
+      background: transparent;
+      color: var(--text);
+      border: 6px solid var(--border);
+      border-radius: var(--control-radius);
+      padding: 18px 24px;
+      font-size: clamp(24px, 2.2vw, 48px);
+      outline: none;
+    }
+
+    .input::placeholder { color: #777; }
+
+    .setup-row-wide {
+      display: grid;
+      grid-template-columns: 1fr minmax(180px, 420px);
+      gap: 28px;
+      align-items: center;
+      max-width: 1120px;
+      margin-bottom: 70px;
+    }
+
+    .button-row-center {
+      display: flex;
+      justify-content: center;
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+      border-radius: 20px;
+      color: white;
+      padding: 22px 34px;
+      font-size: clamp(24px, 2.4vw, 56px);
+      transition: transform 0.08s ease, opacity 0.2s ease;
+    }
+
+    button:hover { opacity: 0.95; }
+    button:active { transform: scale(0.99); }
+    button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    .btn-primary {
+      background: var(--accent);
+      min-width: 420px;
+      min-height: 102px;
+    }
+
+    .game-title {
+      font-size: clamp(30px, 2.8vw, 56px);
+      margin-bottom: 40px;
+      font-weight: 400;
+    }
+
+    .song-card {
+      border: 6px solid var(--border);
+      border-radius: 46px;
+      min-height: 308px;
+      max-width: 1180px;
+      display: grid;
+      grid-template-columns: 1.7fr 1fr;
+      gap: 28px;
+      align-items: center;
+      padding: 34px 38px;
+      margin-bottom: 42px;
+    }
+
+    .song-meta {
+      font-size: clamp(26px, 2.8vw, 54px);
+      line-height: 1.32;
+    }
+
+    .song-year {
+      text-align: center;
+      font-size: clamp(64px, 7vw, 170px);
+      color: var(--success);
+      line-height: 1;
+    }
+
+    .controls {
+      max-width: 1600px;
+      display: grid;
+      grid-template-columns: 260px 1fr 1fr 240px;
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    .btn-nav { background: var(--accent); min-height: 100px; }
+    .btn-play { background: var(--accent-2); min-height: 100px; }
+    .btn-answer { background: var(--success); min-height: 100px; }
+
+    .status {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 24px;
+      min-height: 32px;
+    }
+
+    .small-info {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 22px;
+    }
+
+    .danger { color: var(--danger); }
+
+    #youtube-player {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    @media (max-width: 1100px) {
+      .app { padding: 20px; }
+      .screen { padding: 20px; min-height: auto; }
+      .setup-grid {
+        grid-template-columns: 1fr;
+        max-width: none;
+      }
+      .setup-row-wide {
+        grid-template-columns: 1fr;
+        max-width: none;
+      }
+      .controls {
+        grid-template-columns: 1fr 1fr;
+      }
+      .song-card {
+        grid-template-columns: 1fr;
+        max-width: none;
+      }
+      .btn-primary { min-width: 0; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="top-info" id="baseCount">В базе сейчас: 0 песен</div>
+
+    <section class="screen" id="setupScreen">
+      <h1 class="title">Новая Игра</h1>
+
+      <div class="setup-grid">
+        <div class="label">Год с</div>
+        <input class="input" id="yearFrom" type="number" value="1900" placeholder="например 1970" />
+        <div class="label" style="text-align:center;">по</div>
+        <input class="input" id="yearTo" type="number" value="2030" placeholder="например 1990" />
+      </div>
+
+      <div class="setup-row-wide">
+        <div class="label">Ограничивать в секундах:</div>
+        <input class="input" id="clipSeconds" type="number" placeholder="например 20, оставьте пустым для отсутствия лимита" />
+      </div>
+
+      <div class="button-row-center">
+        <button class="btn-primary" id="startGameBtn">Начать игру</button>
+      </div>
+
+      <div class="status" id="setupStatus"></div>
+    </section>
+
+    <section class="screen hidden" id="gameScreen">
+      <h2 class="game-title" id="songCounter">Песня №1</h2>
+
+      <div class="song-card">
+        <div class="song-meta" id="songMeta">
+          <div>Исполнитель: ???</div>
+          <div>Название: ???</div>
+          <div>Жанр: ???</div>
+        </div>
+        <div class="song-year" id="songYear">????</div>
+      </div>
+
+      <div class="controls">
+        <button class="btn-nav" id="prevBtn">&lt;&lt;</button>
+        <button class="btn-play" id="playPauseBtn">Старт / Пауза</button>
+        <button class="btn-answer" id="showAnswerBtn">Показать ответ</button>
+        <button class="btn-nav" id="nextBtn">&gt;&gt;</button>
+      </div>
+
+      <div class="status" id="gameStatus"></div>
+    </section>
+  </div>
+
+  <div id="youtube-player"></div>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script>
+    const state = {
+      allSongs: [],
+      gameSongs: [],
+      currentIndex: 0,
+      answerVisible: false,
+      clipSeconds: 20,
+      clipTimerId: null,
+      playerReady: false,
+      isPlaying: false
+    };
+
+    const els = {
+      baseCount: document.getElementById('baseCount'),
+      setupScreen: document.getElementById('setupScreen'),
+      gameScreen: document.getElementById('gameScreen'),
+      yearFrom: document.getElementById('yearFrom'),
+      yearTo: document.getElementById('yearTo'),
+      clipSeconds: document.getElementById('clipSeconds'),
+      setupStatus: document.getElementById('setupStatus'),
+      startGameBtn: document.getElementById('startGameBtn'),
+      songCounter: document.getElementById('songCounter'),
+      songMeta: document.getElementById('songMeta'),
+      songYear: document.getElementById('songYear'),
+      showAnswerBtn: document.getElementById('showAnswerBtn'),
+      prevBtn: document.getElementById('prevBtn'),
+      nextBtn: document.getElementById('nextBtn'),
+      playPauseBtn: document.getElementById('playPauseBtn'),
+      gameStatus: document.getElementById('gameStatus'),
+      gameInfo: document.getElementById('gameInfo')
+    };
+
+    let player = null;
+
+    function updateBaseCount() {
+      els.baseCount.textContent = `В базе сейчас: ${state.allSongs.length} песен`;
+    }
+
+    function shuffle(array) {
+      const copy = [...array];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    function extractVideoId(input) {
+      if (!input) return '';
+      if (/^[a-zA-Z0-9_-]{11}$/.test(input)) return input;
+      try {
+        const url = new URL(input);
+        if (url.hostname.includes('youtu.be')) {
+          return url.pathname.replace('/', '').trim();
+        }
+        if (url.searchParams.get('v')) {
+          return url.searchParams.get('v');
+        }
+        const parts = url.pathname.split('/').filter(Boolean);
+        const embedIndex = parts.indexOf('embed');
+        if (embedIndex >= 0 && parts[embedIndex + 1]) return parts[embedIndex + 1];
+      } catch (e) {
+        return '';
+      }
+      return '';
+    }
+
+    function clearClipTimer() {
+      if (state.clipTimerId) {
+        clearTimeout(state.clipTimerId);
+        state.clipTimerId = null;
+      }
+    }
+
+    function stopPlayback() {
+      clearClipTimer();
+      if (player && state.playerReady) {
+        player.pauseVideo();
+      }
+      state.isPlaying = false;
+      els.playPauseBtn.textContent = 'Старт / Пауза';
+    }
+
+    function scheduleClipStop() {
+      clearClipTimer();
+      if (!state.clipSeconds || state.clipSeconds <= 0) return;
+      state.clipTimerId = setTimeout(() => {
+        stopPlayback();
+        els.gameStatus.textContent = `Остановлено автоматически через ${state.clipSeconds} сек.`;
+      }, state.clipSeconds * 1000);
+    }
+
+    function renderCurrentSong() {
+      const song = state.gameSongs[state.currentIndex];
+      if (!song) return;
+
+      els.songCounter.textContent = `Песня №${state.currentIndex + 1}`;
+      els.songMeta.innerHTML = state.answerVisible
+        ? `<div>Исполнитель: ${song.artist ?? '—'}</div><div>Название: ${song.title ?? '—'}</div><div>Жанр: ${song.genre ?? '—'}</div>`
+        : '<div>Исполнитель: ???</div><div>Название: ???</div><div>Жанр: ???</div>';
+      els.songYear.textContent = state.answerVisible ? (song.year ?? '—') : '????';
+      els.showAnswerBtn.textContent = state.answerVisible ? 'Скрыть ответ' : 'Показать ответ';
+      els.gameStatus.textContent = '';
+      updateNavButtons();
+    }
+
+    function updateNavButtons() {
+      els.prevBtn.disabled = state.currentIndex === 0;
+      els.nextBtn.disabled = state.currentIndex >= state.gameSongs.length - 1;
+    }
+
+    function showGameScreen() {
+      els.setupScreen.classList.add('hidden');
+      els.gameScreen.classList.remove('hidden');
+    }
+
+    function startGame() {
+      const from = Number(els.yearFrom.value);
+      const to = Number(els.yearTo.value);
+      const clipSeconds = Number(els.clipSeconds.value || 0);
+
+      if (!Number.isFinite(from) || !Number.isFinite(to)) {
+        els.setupStatus.textContent = 'Нужно заполнить оба года.';
+        els.setupStatus.classList.add('danger');
+        return;
+      }
+
+      if (from > to) {
+        els.setupStatus.textContent = 'Год "с" не может быть больше года "по".';
+        els.setupStatus.classList.add('danger');
+        return;
+      }
+
+      const filtered = state.allSongs.filter(song => Number(song.year) >= from && Number(song.year) <= to);
+      if (!filtered.length) {
+        els.setupStatus.textContent = 'По такому диапазону ничего не найдено.';
+        els.setupStatus.classList.add('danger');
+        return;
+      }
+
+      state.clipSeconds = clipSeconds > 0 ? clipSeconds : 0;
+      state.gameSongs = shuffle(filtered).slice(0, 100).map(song => ({
+        ...song,
+        _gameRangeLabel: `${from}–${to}`
+      }));
+      state.currentIndex = 0;
+      state.answerVisible = false;
+      els.setupStatus.textContent = `Найдено ${filtered.length} песен. В игру взято ${state.gameSongs.length}.`;
+      els.setupStatus.classList.remove('danger');
+      stopPlayback();
+      showGameScreen();
+      renderCurrentSong();
+    }
+
+    function loadCurrentSongToPlayer(autoPlay = false) {
+      const song = state.gameSongs[state.currentIndex];
+      if (!song) return;
+      const videoId = extractVideoId(song.youtube_url);
+      if (!videoId) {
+        els.gameStatus.textContent = 'У этой песни нет корректного youtube_url.';
+        return;
+      }
+      if (!player || !state.playerReady) {
+        els.gameStatus.textContent = 'YouTube-плеер ещё не готов.';
+        return;
+      }
+
+      clearClipTimer();
+      player.loadVideoById({ videoId, startSeconds: 0 });
+      if (autoPlay) {
+        player.playVideo();
+        state.isPlaying = true;
+        scheduleClipStop();
+        els.gameStatus.textContent = 'Играет фрагмент песни.';
+      } else {
+        player.pauseVideo();
+        state.isPlaying = false;
+      }
+    }
+
+    function togglePlayPause() {
+      const song = state.gameSongs[state.currentIndex];
+      if (!song) return;
+
+      const videoId = extractVideoId(song.youtube_url);
+      if (!videoId) {
+        els.gameStatus.textContent = 'Нельзя воспроизвести: не найден video id.';
+        return;
+      }
+
+      if (!player || !state.playerReady) {
+        els.gameStatus.textContent = 'Плеер ещё не готов.';
+        return;
+      }
+
+      const playerState = player.getPlayerState();
+      if (playerState === YT.PlayerState.PLAYING) {
+        stopPlayback();
+        els.gameStatus.textContent = 'Пауза.';
+        return;
+      }
+
+      player.loadVideoById({ videoId, startSeconds: 0 });
+      player.playVideo();
+      state.isPlaying = true;
+      els.gameStatus.textContent = 'Играет фрагмент песни.';
+      scheduleClipStop();
+    }
+
+    function showOrHideAnswer() {
+      state.answerVisible = !state.answerVisible;
+      renderCurrentSong();
+    }
+
+    function goToSong(nextIndex) {
+      if (nextIndex < 0 || nextIndex >= state.gameSongs.length) return;
+      stopPlayback();
+      state.currentIndex = nextIndex;
+      state.answerVisible = false;
+      renderCurrentSong();
+    }
+
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('youtube-player', {
+        videoId: '',
+        playerVars: {
+          autoplay: 0,
+          controls: 0,
+          disablekb: 1,
+          fs: 0,
+          modestbranding: 1,
+          rel: 0,
+          origin: window.location.origin
+        },
+        events: {
+          onReady: () => {
+            state.playerReady = true;
+          },
+          onError: () => {
+            state.isPlaying = false;
+            els.gameStatus.textContent = 'Это видео нельзя встроить или воспроизвести.';
+          },
+          onStateChange: (event) => {
+            if (event.data === YT.PlayerState.ENDED) {
+              clearClipTimer();
+              state.isPlaying = false;
+            }
+          }
+        }
+      });
+    }
+
+    async function loadSongs() {
+      try {
+        const response = await fetch('songs.json');
+        if (!response.ok) throw new Error('Failed to load songs.json');
+        const songs = await response.json();
+        state.allSongs = songs;
+        updateBaseCount();
+      } catch (err) {
+        console.error('Error loading songs.json:', err);
+        els.baseCount.textContent = 'Ошибка загрузки songs.json';
+      }
+    }
+
+    window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
+
+    els.startGameBtn.addEventListener('click', startGame);
+    els.showAnswerBtn.addEventListener('click', showOrHideAnswer);
+    els.prevBtn.addEventListener('click', () => goToSong(state.currentIndex - 1));
+    els.nextBtn.addEventListener('click', () => goToSong(state.currentIndex + 1));
+    els.playPauseBtn.addEventListener('click', togglePlayPause);
+
+    loadSongs();
+  </script>
+</body>
+</html>
