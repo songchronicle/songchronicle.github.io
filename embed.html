@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Strict YouTube embed checker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #eee;
+      padding: 20px;
+    }
+    button {
+      font-size: 18px;
+      padding: 12px 18px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    #log {
+      margin-top: 20px;
+      white-space: pre-wrap;
+      font-family: monospace;
+      background: #1b1b1b;
+      padding: 16px;
+      border-radius: 8px;
+      max-height: 70vh;
+      overflow: auto;
+    }
+    #player {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Strict YouTube embed checker</h1>
+  <button id="startBtn">Старт проверки</button>
+  <button id="downloadBtn" disabled>Скачать результат</button>
+  <div id="log">Готово.</div>
+
+  <div id="player"></div>
+  <script src="https://www.youtube.com/iframe_api"></script>
+
+  <script>
+    let player = null;
+    let songs = [];
+    let currentResolve = null;
+    let timeoutId = null;
+    let started = false;
+
+    const logEl = document.getElementById("log");
+    const startBtn = document.getElementById("startBtn");
+    const downloadBtn = document.getElementById("downloadBtn");
+
+    function log(msg) {
+      console.log(msg);
+      logEl.textContent += "\n" + msg;
+      logEl.scrollTop = logEl.scrollHeight;
+    }
+
+    function extractVideoId(input) {
+      if (!input) return "";
+      if (/^[a-zA-Z0-9_-]{11}$/.test(input)) return input;
+
+      try {
+        const url = new URL(input);
+
+        if (url.hostname.includes("youtu.be")) {
+          return url.pathname.replace("/", "").trim();
+        }
+
+        const v = url.searchParams.get("v");
+        if (v) return v;
+
+        const parts = url.pathname.split("/").filter(Boolean);
+        const embedIndex = parts.indexOf("embed");
+        if (embedIndex >= 0 && parts[embedIndex + 1]) {
+          return parts[embedIndex + 1];
+        }
+      } catch (e) {
+        return "";
+      }
+
+      return "";
+    }
+
+    function saveJsonFile(data, filename) {
+      const blob = new Blob([JSON.stringify(data, null, 2)], {
+        type: "application/json"
+      });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function clearCurrentTimeout() {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+        timeoutId = null;
+      }
+    }
+
+    function finishCurrentCheck(result) {
+      clearCurrentTimeout();
+      if (currentResolve) {
+        const resolve = currentResolve;
+        currentResolve = null;
+        resolve(result);
+      }
+    }
+
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player("player", {
+        width: "1",
+        height: "1",
+        videoId: "",
+        playerVars: {
+          autoplay: 0,
+          controls: 0,
+          disablekb: 1,
+          fs: 0,
+          rel: 0,
+          modestbranding: 1,
+          origin: window.location.origin
+        },
+        events: {
+          onReady: () => {
+            log("YouTube player ready.");
+          },
+          onError: (event) => {
+            finishCurrentCheck({
+              ok: false,
+              errorCode: event.data
+            });
+          },
+          onAutoplayBlocked: () => {
+            finishCurrentCheck({
+              ok: false,
+              errorCode: "AUTOPLAY_BLOCKED"
+            });
+          },
+          onStateChange: (event) => {
+            // Считаем видео рабочим только если оно реально начало играть
+            if (event.data === YT.PlayerState.PLAYING) {
+              finishCurrentCheck({
+                ok: true,
+                errorCode: null
+              });
+            }
+          }
+        }
+      });
+    }
+
+    window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
+
+    async function loadSongs() {
+      const response = await fetch("./songs.json", { cache: "no-store" });
+      if (!response.ok) {
+        throw new Error("Не удалось загрузить songs.json");
+      }
+      songs = await response.json();
+      if (!Array.isArray(songs)) {
+        throw new Error("songs.json должен содержать массив");
+      }
+    }
+
+    function checkVideoEmbed(videoId, timeoutMs = 5000) {
+      return new Promise((resolve) => {
+        if (!player) {
+          resolve({ ok: false, errorCode: "PLAYER_NOT_READY" });
+          return;
+        }
+
+        currentResolve = resolve;
+        clearCurrentTimeout();
+
+        timeoutId = setTimeout(() => {
+          finishCurrentCheck({
+            ok: false,
+            errorCode: "TIMEOUT"
+          });
+        }, timeoutMs);
+
+        try {
+          player.loadVideoById({ videoId, startSeconds: 0 });
+          // Важно: явно просим начать воспроизведение
+          setTimeout(() => {
+            try {
+              player.playVideo();
+            } catch (e) {
+              finishCurrentCheck({
+                ok: false,
+                errorCode: "PLAY_EXCEPTION"
+              });
+            }
+          }, 250);
+        } catch (e) {
+          finishCurrentCheck({
+            ok: false,
+            errorCode: "LOAD_EXCEPTION"
+          });
+        }
+      });
+    }
+
+    async function runCheck() {
+      if (started) return;
+      started = true;
+      startBtn.disabled = true;
+      logEl.textContent = "Запуск...";
+
+      try {
+        await loadSongs();
+        log(`Загружено песен: ${songs.length}`);
+
+        let playableCount = 0;
+        let blockedCount = 0;
+        let failedCount = 0;
+
+        for (let i = 0; i < songs.length; i++) {
+          const song = songs[i];
+          const videoId = extractVideoId(song.youtube_url);
+
+          song.embed_blocked = false;
+          song.embed_check_error = null;
+
+          if (!videoId) {
+            song.embed_blocked = true;
+            song.embed_check_error = "INVALID_VIDEO_ID";
+            failedCount++;
+            log(`[${i + 1}/${songs.length}] INVALID ID: ${song.artist} - ${song.title}`);
+            continue;
+          }
+
+          const result = await checkVideoEmbed(videoId, 5000);
+
+          if (result.ok) {
+            song.embed_blocked = false;
+            playableCount++;
+            log(`[${i + 1}/${songs.length}] OK: ${song.artist} - ${song.title}`);
+          } else if (result.errorCode === 101 || result.errorCode === 150) {
+            song.embed_blocked = true;
+            song.embed_check_error = result.errorCode;
+            blockedCount++;
+            log(`[${i + 1}/${songs.length}] EMBED BLOCKED (${result.errorCode}): ${song.artist} - ${song.title}`);
+          } else {
+            // Не помечаем как embed_blocked по всем подряд ошибкам
+            song.embed_blocked = false;
+            song.embed_check_error = result.errorCode;
+            failedCount++;
+            log(`[${i + 1}/${songs.length}] CHECK FAILED (${result.errorCode}): ${song.artist} - ${song.title}`);
+          }
+
+          // небольшая пауза между запросами
+          await new Promise(r => setTimeout(r, 350));
+        }
+
+        log("");
+        log(`Готово.`);
+        log(`Playable: ${playableCount}`);
+        log(`Embed blocked (101/150): ${blockedCount}`);
+        log(`Other failed: ${failedCount}`);
+
+        downloadBtn.disabled = false;
+      } catch (err) {
+        log("Ошибка: " + err.message);
+      }
+    }
+
+    startBtn.addEventListener("click", runCheck);
+
+    downloadBtn.addEventListener("click", () => {
+      saveJsonFile(songs, "songs.checked.strict.json");
+    });
+  </script>
+</body>
+</html>
