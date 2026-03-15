@@ -22,13 +22,13 @@
     "title": "Вдоль по Питерской",
     "year": 1906,
     "genre": "русская народная песня",
-    "youtube_url": "https://www.youtube.com/watch?v=6CF4wUFnp3M",
+    "youtube_url": "https://www.youtube.com/watch?v=Yyn_hW7MvIA",
     "embed_blocked": true,
     "embed_check_error": 150
   },
   {
     "artist": "Надежда Плевицкая",
-    "title": "Степь да степь кругом",
+    "title": "Над полями да над чистыми",
     "year": 1909,
     "genre": "народная / романс",
     "youtube_url": "https://www.youtube.com/watch?v=CnUG6Y5m9W8",
@@ -40,13 +40,13 @@
     "title": "Лучинушка",
     "year": 1910,
     "genre": "русская народная песня",
-    "youtube_url": "https://www.youtube.com/watch?v=y1ux5ZL4xqA",
+    "youtube_url": "https://www.youtube.com/watch?v=jSOoDJLnt4E",
     "embed_blocked": false,
     "embed_check_error": null
   },
   {
     "artist": "Варвара Панина",
-    "title": "Очи чёрные",
+    "title": "В Одни Глаза Я Влюблена",
     "year": 1910,
     "genre": "романс",
     "youtube_url": "https://www.youtube.com/watch?v=KHLVY_YXmNM",
@@ -85,7 +85,7 @@
     "title": "По долинам и по взгорьям",
     "year": 1929,
     "genre": "военная / походная песня",
-    "youtube_url": "https://www.youtube.com/watch?v=ZKUzmZ3uvsU",
+    "youtube_url": "https://www.youtube.com/watch?v=UHIahS9EkhM",
     "embed_blocked": false,
     "embed_check_error": null
   },
@@ -109,7 +109,7 @@
   },
   {
     "artist": "Николай Крючков",
-    "title": "Песня о встречном",
+    "title": "Здравствуй, милая моя!",
     "year": 1932,
     "genre": "film song",
     "youtube_url": "https://www.youtube.com/watch?v=ZTKeDKwqpTs",
@@ -121,7 +121,7 @@
     "title": "Желтый ангел",
     "year": 1934,
     "genre": "romance",
-    "youtube_url": "https://www.youtube.com/watch?v=KoKLH7eXLiU",
+    "youtube_url": "https://www.youtube.com/watch?v=oNzP2FfO8-g",
     "embed_blocked": false,
     "embed_check_error": null
   },
@@ -164,9 +164,9 @@
   {
     "artist": "Александр Вертинский",
     "title": "Дорогой длинною",
-    "year": 1935,
+    "year": 1926,
     "genre": "romance",
-    "youtube_url": "https://www.youtube.com/watch?v=LVQ3TplZxMA",
+    "youtube_url": "https://www.youtube.com/watch?v=vYSZXDRYrnY",
     "embed_blocked": true,
     "embed_check_error": 150
   },
@@ -193,7 +193,7 @@
     "title": "У Черного моря",
     "year": 1951,
     "genre": "soviet pop",
-    "youtube_url": "https://www.youtube.com/watch?v=6kHjpbJoXTU",
+    "youtube_url": "https://www.youtube.com/watch?v=l49i7oWCVCg",
     "embed_blocked": false,
     "embed_check_error": null
   },
@@ -209,7 +209,7 @@
   {
     "artist": "Клавдия Шульженко",
     "title": "Записка",
-    "year": 1938,
+    "year": 1939,
     "genre": "эстрадная песня",
     "youtube_url": "https://www.youtube.com/watch?v=Q-ucmgWPiYA",
     "embed_blocked": false,
@@ -226,17 +226,17 @@
   },
   {
     "artist": "Любовь Орлова",
-    "title": "Песня о капитане",
+    "title": "Молодёжная",
     "year": 1937,
     "genre": "кинопесня",
-    "youtube_url": "https://www.youtube.com/watch?v=9zMqQydZWB0",
+    "youtube_url": "https://www.youtube.com/watch?v=_tll1qIpVHQ",
     "embed_blocked": false,
     "embed_check_error": null
   },
   {
     "artist": "Тамара Церетели",
-    "title": "Сулико",
-    "year": 1937,
+    "title": "Дорогой длинною",
+    "year": 1925,
     "genre": "georgian folk",
     "youtube_url": "https://www.youtube.com/watch?v=cUcQod1QCow",
     "embed_blocked": false,
@@ -244,7 +244,7 @@
   },
   {
     "artist": "Рашид Бейбутов",
-    "title": "Аршин мал алан",
+    "title": "Ах, ты, моя дорогая",
     "year": 1938,
     "genre": "azerbaijani song",
     "youtube_url": "https://www.youtube.com/watch?v=_Ht_4sSUlLQ",
@@ -253,10 +253,10 @@
   },
   {
     "artist": "Сергей Лемешев",
-    "title": "Вдоль по Питерской",
+    "title": "Вдоль по улице метелица метёт",
     "year": 1938,
     "genre": "folk",
-    "youtube_url": "https://www.youtube.com/watch?v=PHM23r5uwyc",
+    "youtube_url": "https://www.youtube.com/watch?v=36tTr_dBUdI",
     "embed_blocked": false,
     "embed_check_error": null
   },
@@ -274,7 +274,7 @@
     "title": "Валенки",
     "year": 1942,
     "genre": "народная песня",
-    "youtube_url": "https://www.youtube.com/watch?v=S1klwC9JEOU",
+    "youtube_url": "https://www.youtube.com/watch?v=OZSi1jAyd_0",
     "embed_blocked": false,
     "embed_check_error": null
   },
@@ -315,11 +315,11 @@
     "embed_check_error": null
   },
   {
-    "artist": "Эдди Рознер оркестр",
+    "artist": "Оркестр Эдди Рознера",
     "title": "Черные глаза",
     "year": 1939,
     "genre": "jazz",
-    "youtube_url": "https://www.youtube.com/watch?v=BKGKtE0KcRU",
+    "youtube_url": "https://www.youtube.com/watch?v=D8y-ruFsAs0",
     "embed_blocked": false,
     "embed_check_error": null
   },
@@ -328,7 +328,7 @@
     "title": "Синий платочек",
     "year": 1940,
     "genre": "вальс / фронтовая песня",
-    "youtube_url": "https://www.youtube.com/watch?v=17T3iIp6OCM",
+    "youtube_url": "https://www.youtube.com/watch?v=pefW8euBLuM",
     "embed_blocked": false,
     "embed_check_error": null
   },
@@ -337,7 +337,7 @@
     "title": "Смуглянка",
     "year": 1940,
     "genre": "soviet pop",
-    "youtube_url": "https://www.youtube.com/watch?v=rtZFtzXA0fQ",
+    "youtube_url": "https://www.youtube.com/watch?v=OhguvUPMa0o",
     "embed_blocked": false,
     "embed_check_error": null
   },
@@ -355,7 +355,7 @@
     "title": "Давай закурим",
     "year": 1941,
     "genre": "фронтовая песня",
-    "youtube_url": "https://www.youtube.com/watch?v=soDbganAlgc",
+    "youtube_url": "https://www.youtube.com/watch?v=QbS1BMx5EjI",
     "embed_blocked": false,
     "embed_check_error": null
   },
@@ -364,7 +364,7 @@
     "title": "Священная война",
     "year": 1941,
     "genre": "военная песня / марш",
-    "youtube_url": "https://www.youtube.com/watch?v=IrIE0NsAZQI",
+    "youtube_url": "https://www.youtube.com/watch?v=TSDr8Xxd5h0",
     "embed_blocked": false,
     "embed_check_error": null
   },
@@ -373,16 +373,16 @@
     "title": "Марш артиллеристов",
     "year": 1943,
     "genre": "военная песня / марш",
-    "youtube_url": "https://www.youtube.com/watch?v=aa1KeYjnk8c",
+    "youtube_url": "https://www.youtube.com/watch?v=PFW77gq17BE",
     "embed_blocked": false,
     "embed_check_error": null
   },
   {
     "artist": "Ефрем Флакс",
-    "title": "Огонёк",
+    "title": "Золотые огоньки",
     "year": 1943,
     "genre": "военная лирика",
-    "youtube_url": "https://www.youtube.com/watch?v=1A4Wql8RfjM",
+    "youtube_url": "https://www.youtube.com/watch?v=z7P68vuaNHY",
     "embed_blocked": false,
     "embed_check_error": null
   },
@@ -391,7 +391,7 @@
     "title": "Случайный вальс",
     "year": 1943,
     "genre": "военная лирика / вальс",
-    "youtube_url": "https://www.youtube.com/watch?v=0jyjNjJ9Ub0",
+    "youtube_url": "https://www.youtube.com/watch?v=cgAreJsEZlw",
     "embed_blocked": false,
     "embed_check_error": null
   },
@@ -412,15 +412,6 @@
     "youtube_url": "https://www.youtube.com/watch?v=hDSxfoHWCS8",
     "embed_blocked": false,
     "embed_check_error": null
-  },
-  {
-    "artist": "Владимир Бунчиков",
-    "title": "Смуглянка",
-    "year": 1944,
-    "genre": "военная песня",
-    "youtube_url": "https://www.youtube.com/watch?v=08SFaLS7qS8",
-    "embed_blocked": false,
-    "embed_check_error": "TIMEOUT"
   },
   {
     "artist": "Георгий Виноградов",
@@ -478,37 +469,10 @@
   },
   {
     "artist": "Леонид Харитонов",
-    "title": "Вижу чудное приволье",
+    "title": "Родина",
     "year": 1950,
     "genre": "патриотическая / народная",
-    "youtube_url": "https://www.youtube.com/watch?v=5cu4eTabXCo",
-    "embed_blocked": false,
-    "embed_check_error": null
-  },
-  {
-    "artist": "Капелла имени Александрова",
-    "title": "Смуглянка",
-    "year": 1951,
-    "genre": "patriotic",
-    "youtube_url": "https://www.youtube.com/watch?v=3R6Ispl6LZ0",
-    "embed_blocked": false,
-    "embed_check_error": null
-  },
-  {
-    "artist": "Гоар Гаспарян",
-    "title": "Назар им яр",
-    "year": 1953,
-    "genre": "армянская народная песня",
-    "youtube_url": null,
-    "embed_blocked": true,
-    "embed_check_error": "INVALID_VIDEO_ID"
-  },
-  {
-    "artist": "Ансамбль Березка",
-    "title": "Калинка",
-    "year": 1954,
-    "genre": "folk",
-    "youtube_url": "https://www.youtube.com/watch?v=eBunkkCK5wA",
+    "youtube_url": "https://www.youtube.com/watch?v=R7J0geC-6jw",
     "embed_blocked": false,
     "embed_check_error": null
   },
@@ -522,11 +486,11 @@
     "embed_check_error": null
   },
   {
-    "artist": "Николай Рыбников",
+    "artist": "Валентин Никулин",
     "title": "Песня о друге",
-    "year": 1954,
+    "year": 1962,
     "genre": "кинопесня",
-    "youtube_url": "https://www.youtube.com/watch?v=HftPkOTeI7c",
+    "youtube_url": "https://www.youtube.com/watch?v=6iwN8KD-PDM",
     "embed_blocked": false,
     "embed_check_error": null
   },
@@ -536,24 +500,6 @@
     "year": 1954,
     "genre": "эстрадная песня",
     "youtube_url": "https://www.youtube.com/watch?v=iz2vgkbqq7A",
-    "embed_blocked": false,
-    "embed_check_error": null
-  },
-  {
-    "artist": "Беньяминс Блушс",
-    "title": "Pūt, vējiņi",
-    "year": 1955,
-    "genre": "латышская народная песня",
-    "youtube_url": null,
-    "embed_blocked": true,
-    "embed_check_error": "INVALID_VIDEO_ID"
-  },
-  {
-    "artist": "Ансамбль Березка",
-    "title": "Во поле береза стояла",
-    "year": 1955,
-    "genre": "folk",
-    "youtube_url": "https://www.youtube.com/watch?v=xufLo7_X9io",
     "embed_blocked": false,
     "embed_check_error": null
   },
@@ -571,7 +517,7 @@
     "title": "Калинка",
     "year": 1955,
     "genre": "folk",
-    "youtube_url": "https://www.youtube.com/watch?v=KPEmUITNs2g",
+    "youtube_url": "https://www.youtube.com/watch?v=rxL-Eymtos4",
     "embed_blocked": false,
     "embed_check_error": null
   },
@@ -586,8 +532,17 @@
   },
   {
     "artist": "Нина Дорда",
-    "title": "Московские улицы",
-    "year": 1955,
+    "title": "Озорница",
+    "year": 1962,
+    "genre": "soviet pop",
+    "youtube_url": "https://www.youtube.com/watch?v=sl5aq7bk9qc",
+    "embed_blocked": false,
+    "embed_check_error": null
+  },
+  {
+    "artist": "Нина Дорда",
+    "title": "Песня остается с человеком",
+    "year": 1967,
     "genre": "soviet pop",
     "youtube_url": "https://www.youtube.com/watch?v=5oVw5vGkVtg",
     "embed_blocked": false,
@@ -596,16 +551,16 @@
   {
     "artist": "Галина Вишневская",
     "title": "Очи черные",
-    "year": 1955,
+    "year": 1964,
     "genre": "romance",
-    "youtube_url": "https://www.youtube.com/watch?v=diR2dq9Xr5c",
+    "youtube_url": "https://www.youtube.com/watch?v=w5GdDfoVjvE",
     "embed_blocked": false,
     "embed_check_error": null
   },
   {
     "artist": "Георг Отс",
     "title": "Севастопольский вальс",
-    "year": 1955,
+    "year": 1967,
     "genre": "вальс",
     "youtube_url": "https://www.youtube.com/watch?v=K18iNjr85Mg",
     "embed_blocked": false,
@@ -622,28 +577,19 @@
   },
   {
     "artist": "Владимир Трошин",
-    "title": "Московские окна",
-    "year": 1956,
+    "title": "14 минут до старта",
+    "year": 1961,
     "genre": "soviet pop",
-    "youtube_url": "https://www.youtube.com/watch?v=OcFzMyAqrtw",
+    "youtube_url": "https://www.youtube.com/watch?v=pSFFmj9g_3E",
     "embed_blocked": false,
     "embed_check_error": null
   },
   {
     "artist": "Ольга Воронец",
-    "title": "Ой, мороз, мороз",
-    "year": 1956,
+    "title": "Белый снег",
+    "year": 1963,
     "genre": "folk",
-    "youtube_url": "https://www.youtube.com/watch?v=tiwes1rgQU8",
-    "embed_blocked": false,
-    "embed_check_error": null
-  },
-  {
-    "artist": "Нонна Мордюкова",
-    "title": "Песня о хорошем настроении",
-    "year": 1956,
-    "genre": "кинопесня",
-    "youtube_url": "https://www.youtube.com/watch?v=b9GAaQl9wrU",
+    "youtube_url": "https://www.youtube.com/watch?v=MykfMbs7biE",
     "embed_blocked": false,
     "embed_check_error": null
   },
@@ -693,11 +639,11 @@
     "embed_check_error": 150
   },
   {
-    "artist": "Николай Рыбников",
+    "artist": "Марк Бернес",
     "title": "Если б парни всей земли",
     "year": 1957,
     "genre": "кинопесня",
-    "youtube_url": "https://www.youtube.com/watch?v=5xGDDa3jec8",
+    "youtube_url": "https://www.youtube.com/watch?v=c2CkIuqBI6E",
     "embed_blocked": false,
     "embed_check_error": null
   },
@@ -706,13 +652,13 @@
     "title": "Мы армия народа",
     "year": 1957,
     "genre": "patriotic",
-    "youtube_url": "https://www.youtube.com/watch?v=9LfixzRheU8",
+    "youtube_url": "https://www.youtube.com/watch?v=NsJQiH-W1rE",
     "embed_blocked": false,
     "embed_check_error": null
   },
   {
     "artist": "Георг Отс",
-    "title": "Я встретил девушку",
+    "title": "Я встретил Вас",
     "year": 1957,
     "genre": "кинопесня",
     "youtube_url": "https://www.youtube.com/watch?v=EVHy79I49NM",
@@ -724,7 +670,7 @@
     "title": "Я люблю тебя, жизнь",
     "year": 1957,
     "genre": "soviet pop",
-    "youtube_url": "https://www.youtube.com/watch?v=5G0kyPe7TZ8",
+    "youtube_url": "https://www.youtube.com/watch?v=Uu6yyHZH8MM",
     "embed_blocked": false,
     "embed_check_error": null
   },
@@ -733,7 +679,7 @@
     "title": "Гакку",
     "year": 1958,
     "genre": "казахская народная песня",
-    "youtube_url": "https://www.youtube.com/watch?v=h3E6hf6E6ag",
+    "youtube_url": "https://www.youtube.com/watch?v=KxBWtPupjeQ",
     "embed_blocked": false,
     "embed_check_error": null
   },
@@ -748,17 +694,17 @@
   },
   {
     "artist": "Александра Стрельченко",
-    "title": "Ивушка",
-    "year": 1958,
+    "title": "Я на горку шла",
+    "year": 1967,
     "genre": "folk",
-    "youtube_url": "https://www.youtube.com/watch?v=qKQvBjwKlk0",
+    "youtube_url": "https://www.youtube.com/watch?v=TP5G6vJdKwY",
     "embed_blocked": false,
     "embed_check_error": null
   },
   {
     "artist": "Николай Рыбников",
     "title": "Марш монтажников",
-    "year": 1958,
+    "year": 1957,
     "genre": "film song",
     "youtube_url": "https://www.youtube.com/watch?v=wprTlXEwitQ",
     "embed_blocked": false,
@@ -774,29 +720,20 @@
     "embed_check_error": null
   },
   {
-    "artist": "Дмитрий Гнатюк",
-    "title": "Ридна мати моя",
+    "artist": "Александр Таранец",
+    "title": "Ридна маты моя",
     "year": 1958,
     "genre": "ukrainian folk",
-    "youtube_url": "https://www.youtube.com/watch?v=XTEMDTVGiKE",
+    "youtube_url": "https://www.youtube.com/watch?v=UWbrsoV1Kpg",
     "embed_blocked": false,
     "embed_check_error": null
   },
   {
     "artist": "Людмила Зыкина",
     "title": "Рязанские мадонны",
-    "year": 1958,
+    "year": 1964,
     "genre": "folk",
-    "youtube_url": "https://www.youtube.com/watch?v=M_r31W2px7I",
-    "embed_blocked": false,
-    "embed_check_error": null
-  },
-  {
-    "artist": "Тамара Церетели",
-    "title": "Тбилисо",
-    "year": 1958,
-    "genre": "georgian folk",
-    "youtube_url": "https://www.youtube.com/watch?v=srz9Ir6yCI4",
+    "youtube_url": "https://www.youtube.com/watch?v=hJG5lLfS0-U",
     "embed_blocked": false,
     "embed_check_error": null
   },
@@ -821,18 +758,18 @@
   {
     "artist": "Муслим Магомаев",
     "title": "Бухенвальдский набат",
-    "year": 1959,
+    "year": 1971,
     "genre": "patriotic",
-    "youtube_url": "https://www.youtube.com/watch?v=om8RllQ6KeM",
+    "youtube_url": "https://www.youtube.com/watch?v=8pZ4uqHTwkY",
     "embed_blocked": false,
     "embed_check_error": null
   },
   {
     "artist": "Эдита Пьеха",
     "title": "Город детства",
-    "year": 1959,
+    "year": 1966,
     "genre": "soviet pop",
-    "youtube_url": "https://www.youtube.com/watch?v=BYWsfw0ofkk",
+    "youtube_url": "https://www.youtube.com/watch?v=H7s6OdihaRE",
     "embed_blocked": false,
     "embed_check_error": null
   },
@@ -848,7 +785,7 @@
   {
     "artist": "Нина Дорда",
     "title": "Ландыши",
-    "year": 1959,
+    "year": 1958,
     "genre": "soviet pop",
     "youtube_url": "https://www.youtube.com/watch?v=CD3y3escvZs",
     "embed_blocked": false,
@@ -857,16 +794,16 @@
   {
     "artist": "Эдуард Хиль",
     "title": "Лесорубы",
-    "year": 1959,
+    "year": 1967,
     "genre": "soviet pop",
-    "youtube_url": "https://www.youtube.com/watch?v=vGPq_VIQNBE",
+    "youtube_url": "https://www.youtube.com/watch?v=zpY3vCYhIYk",
     "embed_blocked": false,
     "embed_check_error": null
   },
   {
     "artist": "Людмила Зыкина",
     "title": "Оренбургский пуховый платок",
-    "year": 1959,
+    "year": 1967,
     "genre": "лирическая песня",
     "youtube_url": "https://www.youtube.com/watch?v=-kvBDVeBxtU",
     "embed_blocked": false,
@@ -874,8 +811,8 @@
   },
   {
     "artist": "Гелена Великанова",
-    "title": "Песенка о капитане",
-    "year": 1959,
+    "title": "Песенка про начальника",
+    "year": 1971,
     "genre": "film song",
     "youtube_url": "https://www.youtube.com/watch?v=GYZFuXKfr0o",
     "embed_blocked": false,
@@ -884,7 +821,7 @@
   {
     "artist": "Эдита Пьеха",
     "title": "Песня остается с человеком",
-    "year": 1959,
+    "year": 1964,
     "genre": "soviet pop",
     "youtube_url": "https://www.youtube.com/watch?v=DC_7poQKhmE",
     "embed_blocked": false,
@@ -904,23 +841,23 @@
     "title": "С чего начинается Родина",
     "year": 1959,
     "genre": "soviet pop",
-    "youtube_url": "https://www.youtube.com/watch?v=25gPpzgCyKM",
+    "youtube_url": "https://www.youtube.com/watch?v=0zfeIAlFJ-g",
     "embed_blocked": false,
     "embed_check_error": null
   },
   {
     "artist": "Нани Брегвадзе",
     "title": "Тбилисо",
-    "year": 1959,
+    "year": 1972,
     "genre": "грузинская песня",
     "youtube_url": "https://www.youtube.com/watch?v=h-CJBCJ8WwU",
     "embed_blocked": false,
     "embed_check_error": null
   },
   {
-    "artist": "Иосиф Кобзон",
+    "artist": "Людмила Зыкина",
     "title": "Течет Волга",
-    "year": 1959,
+    "year": 1964,
     "genre": "soviet pop",
     "youtube_url": "https://www.youtube.com/watch?v=KNyw5D6J7Kc",
     "embed_blocked": false,
@@ -929,7 +866,7 @@
   {
     "artist": "Майя Кристалинская",
     "title": "Я тебя подожду",
-    "year": 1959,
+    "year": 1962,
     "genre": "soviet pop",
     "youtube_url": "https://www.youtube.com/watch?v=RnuFyr0g3g4",
     "embed_blocked": false,
@@ -940,14 +877,14 @@
     "title": "Увезу тебя я в тундру",
     "year": 1969,
     "genre": "эстрадная песня",
-    "youtube_url": "https://www.youtube.com/watch?v=E0OlqbDVMfI",
+    "youtube_url": "https://www.youtube.com/watch?v=vxv48DVjIlg",
     "embed_blocked": false,
     "embed_check_error": null
   },
   {
     "artist": "Владимир Трошин",
     "title": "Люди в белых халатах",
-    "year": 1960,
+    "year": 1975,
     "genre": "эстрадная песня",
     "youtube_url": "https://www.youtube.com/watch?v=RH1f06nQcmM",
     "embed_blocked": false,
@@ -956,7 +893,7 @@
   {
     "artist": "Рашид Бейбутов",
     "title": "Я встретил девушку",
-    "year": 1960,
+    "year": 1958,
     "genre": "soviet pop",
     "youtube_url": "https://www.youtube.com/watch?v=bU4lqc1UWRo",
     "embed_blocked": false,
