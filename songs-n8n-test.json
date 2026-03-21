@@ -1,0 +1,38 @@
+[
+  {
+    "artist": "Фёдор Шаляпин",
+    "title": "Дубинушка",
+    "year": 1905,
+    "genre": "народная / рабочая песня",
+    "youtube_url": "https://www.youtube.com/watch?v=aMCFALhS90c",
+    "embed_blocked": false,
+    "embed_check_error": null
+  },
+  {
+    "artist": "Надежда Плевицкая",
+    "title": "Над полями да над чистыми",
+    "year": 1909,
+    "genre": "народная / романс",
+    "youtube_url": "https://www.youtube.com/watch?v=CnUG6Y5m9W8",
+    "embed_blocked": false,
+    "embed_check_error": null
+  },
+  {
+    "artist": "Лариса Долина",
+    "title": "Льдинка",
+    "year": 1983,
+    "genre": "поп",
+    "youtube_url": "https://www.youtube.com/watch?v=sAx4Giir7Us",
+    "embed_blocked": false,
+    "embed_check_error": null
+  },
+  {
+    "artist": "Jony & MONA",
+    "title": "Воздушный сарафан",
+    "year": 2023,
+    "genre": "pop",
+    "youtube_url": "https://www.youtube.com/watch?v=DYC8ZleUvgE",
+    "embed_blocked": false,
+    "embed_check_error": null
+  }
+]
