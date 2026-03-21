@@ -2,7 +2,7 @@ import json
 import os
 from copy import deepcopy
 
-INPUT_FILE = "songs.json"
+INPUT_FILE = "songs.with_perplexity.json"
 OUTPUT_FILE = "songs.resolved.json"
 
 
