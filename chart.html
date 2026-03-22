@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Распределение песен по годам</title>
+  <style>
+    :root {
+      --bg: #f7f7fb;
+      --panel: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #d1d5db;
+      --accent: #2563eb;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .card {
+      background: var(--panel);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+    }
+
+    .subtitle {
+      margin: 0 0 20px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    button,
+    input[type="file"] {
+      font: inherit;
+    }
+
+    button {
+      border: none;
+      background: var(--accent);
+      color: white;
+      padding: 10px 14px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.95;
+    }
+
+    .status {
+      margin: 10px 0 18px;
+      color: var(--muted);
+      min-height: 22px;
+    }
+
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin: 0 0 18px;
+      color: var(--muted);
+    }
+
+    .stats strong {
+      color: var(--text);
+    }
+
+    .chart-box {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    canvas {
+      display: block;
+      width: 100%;
+      min-width: 900px;
+      height: 520px;
+    }
+
+    .hint {
+      margin-top: 14px;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    code {
+      background: #eef2ff;
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Диаграмма распределения песен по годам</h1>
+      <p class="subtitle">
+        Страница пытается автоматически загрузить файл <code>songs.resolved.json</code> из той же папки.
+        Если браузер блокирует чтение локального файла, выбери JSON вручную через кнопку ниже.
+      </p>
+
+      <div class="controls">
+        <button id="loadDefaultBtn">Загрузить songs.resolved.json</button>
+        <input id="fileInput" type="file" accept=".json,application/json" />
+      </div>
+
+      <div id="status" class="status">Ожидание загрузки данных…</div>
+      <div id="stats" class="stats"></div>
+
+      <div class="chart-box">
+        <canvas id="chart" width="1400" height="520"></canvas>
+      </div>
+
+      <div class="hint">
+        Ожидается JSON-массив объектов с полями <code>artist</code>, <code>title</code>, <code>year</code>.
+        Для автоматической загрузки удобнее запускать файл через локальный сервер, например:
+        <code>python -m http.server</code>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const statusEl = document.getElementById('status');
+    const statsEl = document.getElementById('stats');
+    const canvas = document.getElementById('chart');
+    const ctx = canvas.getContext('2d');
+    const fileInput = document.getElementById('fileInput');
+    const loadDefaultBtn = document.getElementById('loadDefaultBtn');
+
+    function setStatus(text, isError = false) {
+      statusEl.textContent = text;
+      statusEl.style.color = isError ? '#b91c1c' : '#6b7280';
+    }
+
+    function isValidYear(value) {
+      const year = Number(value);
+      return Number.isInteger(year) && year > 0 && year < 3000;
+    }
+
+    function aggregateByYear(items) {
+      const counts = new Map();
+
+      for (const item of items) {
+        if (!item || !isValidYear(item.year)) continue;
+        const year = Number(item.year);
+        counts.set(year, (counts.get(year) || 0) + 1);
+      }
+
+      return [...counts.entries()]
+        .sort((a, b) => a[0] - b[0])
+        .map(([year, count]) => ({ year, count }));
+    }
+
+    function renderStats(items, data) {
+      const validSongs = items.filter(item => item && isValidYear(item.year)).length;
+      const invalidSongs = items.length - validSongs;
+      const minYear = data.length ? data[0].year : '—';
+      const maxYear = data.length ? data[data.length - 1].year : '—';
+
+      statsEl.innerHTML = `
+        <div>Всего записей: <strong>${items.length}</strong></div>
+        <div>С корректным годом: <strong>${validSongs}</strong></div>
+        <div>Пропущено: <strong>${invalidSongs}</strong></div>
+        <div>Диапазон лет: <strong>${minYear}–${maxYear}</strong></div>
+        <div>Уникальных лет: <strong>${data.length}</strong></div>
+      `;
+    }
+
+    function drawChart(data) {
+      const width = canvas.width;
+      const height = canvas.height;
+      const left = 70;
+      const right = 20;
+      const top = 20;
+      const bottom = 60;
+      const plotWidth = width - left - right;
+      const plotHeight = height - top - bottom;
+
+      ctx.clearRect(0, 0, width, height);
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, width, height);
+
+      if (!data.length) {
+        ctx.fillStyle = '#6b7280';
+        ctx.font = '20px Arial';
+        ctx.fillText('Нет данных для построения диаграммы', 40, 60);
+        return;
+      }
+
+      const maxCount = Math.max(...data.map(d => d.count));
+      const barGap = 4;
+      const barWidth = Math.max(6, (plotWidth / data.length) - barGap);
+      const stepX = plotWidth / data.length;
+      const yTicks = Math.min(8, maxCount);
+
+      ctx.strokeStyle = '#d1d5db';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(left, top);
+      ctx.lineTo(left, height - bottom);
+      ctx.lineTo(width - right, height - bottom);
+      ctx.stroke();
+
+      ctx.font = '12px Arial';
+      ctx.fillStyle = '#6b7280';
+      ctx.textAlign = 'right';
+      ctx.textBaseline = 'middle';
+
+      for (let i = 0; i <= yTicks; i++) {
+        const value = Math.round((maxCount / yTicks) * i);
+        const y = height - bottom - (plotHeight * i / yTicks);
+
+        ctx.strokeStyle = '#eef2f7';
+        ctx.beginPath();
+        ctx.moveTo(left, y);
+        ctx.lineTo(width - right, y);
+        ctx.stroke();
+
+        ctx.fillStyle = '#6b7280';
+        ctx.fillText(String(value), left - 8, y);
+      }
+
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'top';
+
+      const labelStep = Math.ceil(data.length / 20);
+
+      data.forEach((d, index) => {
+        const x = left + index * stepX + (stepX - barWidth) / 2;
+        const barHeight = (d.count / maxCount) * plotHeight;
+        const y = height - bottom - barHeight;
+
+        ctx.fillStyle = '#2563eb';
+        ctx.fillRect(x, y, barWidth, barHeight);
+
+        if (index % labelStep === 0 || index === data.length - 1) {
+          ctx.save();
+          ctx.translate(x + barWidth / 2, height - bottom + 8);
+          ctx.rotate(-Math.PI / 4);
+          ctx.fillStyle = '#4b5563';
+          ctx.fillText(String(d.year), 0, 0);
+          ctx.restore();
+        }
+      });
+
+      ctx.fillStyle = '#111827';
+      ctx.font = 'bold 16px Arial';
+      ctx.textAlign = 'center';
+      ctx.fillText('Количество песен по годам', width / 2, height - 20);
+    }
+
+    function processSongs(items) {
+      if (!Array.isArray(items)) {
+        throw new Error('JSON должен содержать массив.');
+      }
+
+      const aggregated = aggregateByYear(items);
+      renderStats(items, aggregated);
+      drawChart(aggregated);
+      setStatus(`Загружено ${items.length} записей. Диаграмма построена.`);
+    }
+
+    async function loadDefaultFile() {
+      setStatus('Пробую загрузить songs.resolved.json…');
+      try {
+        const response = await fetch('songs.resolved.json', { cache: 'no-store' });
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+        const json = await response.json();
+        processSongs(json);
+      } catch (error) {
+        setStatus(
+          'Не удалось автоматически загрузить songs.resolved.json. Выбери файл вручную или открой HTML через локальный сервер.',
+          true
+        );
+        console.error(error);
+      }
+    }
+
+    fileInput.addEventListener('change', async (event) => {
+      const file = event.target.files?.[0];
+      if (!file) return;
+
+      setStatus(`Читаю файл ${file.name}…`);
+      try {
+        const text = await file.text();
+        const json = JSON.parse(text);
+        processSongs(json);
+      } catch (error) {
+        setStatus('Ошибка чтения JSON-файла.', true);
+        console.error(error);
+      }
+    });
+
+    loadDefaultBtn.addEventListener('click', loadDefaultFile);
+
+    loadDefaultFile();
+  </script>
+</body>
+</html>
