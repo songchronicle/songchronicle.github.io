@@ -5466,7 +5466,7 @@
     "title": "Мелодия",
     "year": 1972,
     "genre": "эстрада",
-    "youtube_url": "https://www.youtube.com/watch?v=QpHh9WDMec8",
+    "youtube_url": "https://www.youtube.com/watch?v=1g92hM9lwRk",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -5488,7 +5488,7 @@
     "title": "Чито-гврито",
     "year": 1977,
     "genre": "georgian folk-pop",
-    "youtube_url": "https://www.youtube.com/watch?v=MATetAVwFsg",
+    "youtube_url": "https://www.youtube.com/watch?v=49clFcIFHiQ",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -5505,43 +5505,9 @@
     }
   },
   {
-    "artist": "ВИА Гая",
-    "title": "Azərbaycan mahnısı",
-    "year": 1966,
-    "genre": "azerbaijani vocal jazz",
-    "youtube_url": "https://www.youtube.com/watch?v=pciqGlz-LBw",
-    "embed_blocked": false,
-    "embed_check_error": null,
-    "perplexity_content": {
-      "perplexity_comment": "Точная дата первого публичного выхода песни не найдена в результатах поиска. Год 1966 указан на основе дебюта ансамбля на Всесоюзном конкурсе советской песни и упоминания в антологии 'Девушки Баку (Антология советской песни 1966)'[1][3]. Песня не явно перечислена в доступных треклистах, возможны альтернативные названия на азербайджанском или русском.",
-      "perplexity_citations": [
-        "https://music.apple.com/ru/album/%D0%B2%D0%B8%D0%B0-%D0%B3%D0%B0%D1%8F/1728483031",
-        "https://music.apple.com/us/song/%D0%BF%D1%80%D0%B8%D1%85%D0%BE%D0%B4%D0%B8-%D0%BD%D0%B0-%D0%B0%D0%B7%D0%B5%D1%80%D0%B1%D0%B0%D0%B8-%D0%B4%D0%B6%D0%B0%D0%BD%D1%81%D0%BA%D0%BE%D0%BC/1741312544",
-        "http://bdn-steiner.ru/modules.php?go=page&name=Audio&pid=199",
-        "https://my.mail.ru/music/playlists/%D0%B2%D0%B8%D0%B0-%D0%B3%D0%B0%D1%8F-1965-1970-6331057761119",
-        "https://abrgen.ru/muzika/luchshie_otechest/gaya/",
-        "https://www.youtube.com/watch?v=VOUSHfGiw5k",
-        "https://ru.ruwiki.ru/wiki/%D0%93%D0%B0%D1%8F_(%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B5%D1%82)"
-      ]
-    }
-  },
-  {
-    "artist": "Imants Skrunda",
-    "title": "Dziesma par Rīgu",
-    "year": 1980,
-    "genre": "latvian estrada",
-    "youtube_url": null,
-    "embed_blocked": true,
-    "embed_check_error": "INVALID_VIDEO_ID",
-    "perplexity_content": {
-      "perplexity_comment": "Песня вышла в 1980 году в составе саундтрека к советскому фильму 'Рижские мотивы' (Rīgas motīvi, реж. Aloizs Brencs). Это дата первой публичной премьеры фильма и официального релиза музыки. Альбом с песней также выпущен в том же году на студии Melodija (Латвийская студия грамзаписи).",
-      "perplexity_citations": []
-    }
-  },
-  {
     "artist": "ВИА Добры молодцы",
     "title": "Алёнушка",
-    "year": 1975,
+    "year": 1988,
     "genre": "ВИА",
     "youtube_url": "https://www.youtube.com/watch?v=7Gz8wDoVMEM",
     "embed_blocked": false,
@@ -5674,24 +5640,17 @@
     }
   },
   {
-    "artist": "Яак Йоала",
+    "artist": "Игорь Иванов",
     "title": "Из вагантов",
     "year": 1975,
     "genre": "рок-баллада",
-    "youtube_url": "https://www.youtube.com/watch?v=4WTVP-ouGpM",
+    "youtube_url": "https://www.youtube.com/watch?v=fAHWvUANVCg",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
-      "perplexity_comment": "В поисковых результатах нет информации о песне с названием 'Из вагантов' в исполнении Яака Йоалы или с похожим названием. Упоминаются песни вроде 'Я тебя рисую' (из фильма '31 июня', 1979), 'Лаванда', 'Не беда', но ничего соответствующего запросу. Возможно, название указано с ошибкой или это редкая композиция без данных о дате выхода.",
+      "perplexity_comment": "Песня[1] композитора Давида Тухманова из концептуального альбома Тухманова «По волне моей памяти» (1976) на вольный перевод Льва Гинзбурга с латинского языка текста песни вагантов Hospita in Gallia (XIII век).",
       "perplexity_citations": [
-        "https://stuki-druki.com/authors/Joala-Jaak.php",
-        "https://biographe.ru/znamenitosti/yak-yoala/",
-        "https://kulturologia.ru/blogs/260621/50265/",
-        "https://kkre-28.narod.ru/ioala.htm",
-        "https://ru.wikipedia.org/wiki/%D0%99%D0%BE%D0%B0%D0%BB%D0%B0,_%D0%AF%D0%B0%D0%BA_%D0%90%D1%80%D0%BD%D0%BE%D0%B2%D0%B8%D1%87",
-        "https://vk.com/wall-60958526_129789",
-        "https://tabloid.net.ru/ot-ruslanovoj-do-ruki-vverx-xronologiya-koncertov-na-kaluzhskom-stadione/",
-        "http://popsa.su/bio/006/006d.html"
+        "https://ru.wikipedia.org/wiki/%D0%98%D0%B7_%D0%B2%D0%B0%D0%B3%D0%B0%D0%BD%D1%82%D0%BE%D0%B2"
       ]
     }
   },
@@ -5700,7 +5659,7 @@
     "title": "Клён",
     "year": 1975,
     "genre": "ВИА",
-    "youtube_url": "https://www.youtube.com/watch?v=IhxkoPeR6aY",
+    "youtube_url": "https://www.youtube.com/watch?v=syXtwSZqDvQ",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -5814,7 +5773,7 @@
     "title": "Со мною вот что происходит",
     "year": 1975,
     "genre": "авторская песня",
-    "youtube_url": "https://www.youtube.com/watch?v=_jiMwkYG6hw",
+    "youtube_url": "https://www.youtube.com/watch?v=_vsoHttxJCE",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -5857,7 +5816,7 @@
     "title": "Черемшина",
     "year": 1983,
     "genre": "ukrainian folk-pop",
-    "youtube_url": "https://www.youtube.com/watch?v=mcRMs40q6-8",
+    "youtube_url": "https://www.youtube.com/watch?v=xyMoq8rddeE",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -5880,7 +5839,7 @@
     "title": "Я спросил у ясеня",
     "year": 1975,
     "genre": "авторская песня",
-    "youtube_url": "https://www.youtube.com/watch?v=REy643r7z60",
+    "youtube_url": "https://www.youtube.com/watch?v=Id2mVKnZh0c",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -5902,7 +5861,7 @@
     "title": "Яблони в цвету",
     "year": 1975,
     "genre": "эстрада",
-    "youtube_url": "https://www.youtube.com/watch?v=s87AfnKh6Wk",
+    "youtube_url": "https://www.youtube.com/watch?v=9p9MMaosgYk",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -5944,37 +5903,17 @@
     }
   },
   {
-    "artist": "Виктория Кохана",
-    "title": "Palanga jūra",
-    "year": 1976,
-    "genre": "lithuanian pop",
-    "youtube_url": null,
-    "embed_blocked": true,
-    "embed_check_error": "INVALID_VIDEO_ID",
-    "perplexity_content": {
-      "perplexity_comment": "Не найдены релевантные источники с информацией о песне 'Viktoriya Kokhana - Palanga jūra'. Требуется проведение нового поиска с использованием музыкальных баз данных или других источников, содержащих информацию об этом произведении.",
-      "perplexity_citations": [
-        "https://www.etnolog.org.ua/pdf/stories/dovidkovi/2019/slovnyk.pdf",
-        "https://lotg.gov.ua/wp-content/uploads/2021/11/Abstrakty-lytovskoyi-konferentsiyi-1.pdf"
-      ]
-    }
-  },
-  {
     "artist": "Полад Бюль-Бюль оглы",
-    "title": "Sevgi nəğməsi",
-    "year": 1976,
+    "title": "Mavi Gözündə",
+    "year": 1968,
     "genre": "azerbaijani pop",
     "youtube_url": "https://www.youtube.com/watch?v=AmOtl5qEtQY",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
-      "perplexity_comment": "Точная дата выхода песни не найдена в доступных результатах поиска. Упомянуты ранние работы исполнителя в возрасте 17 лет (около 1962 года, поскольку родился в 1945 году)[1][2], но конкретно для 'Sevgi nəğməsi' информация отсутствует. Есть упоминания в контексте балета 'Любовь и смерть' П.Бюль-Бюль оглы, но без дат[5].",
+      "perplexity_comment": "она вышла в конце 1960-х годов (около 1968 года) и входила в репертуар/релизы, связанные с альбомом «Gəl Ey Səhər» (1968)",
       "perplexity_citations": [
-        "https://vk.com/wall-11994898_173208",
-        "https://melody.su/melody/events/204/",
-        "http://anl.az/down/Q.Qarayev-biblioqrafiya.pdf",
-        "https://elchin.musigi-dunya.az/hq_kitablar/elchin_biblioqrafiya.pdf",
-        "https://refdb.ru/look/2307142-pall.html"
+        "https://ru.wikipedia.org/wiki/%D0%91%D1%8E%D0%BB%D1%8C%D0%B1%D1%8E%D0%BB%D1%8C_%D0%BE%D0%B3%D0%BB%D1%8B,_%D0%9F%D0%BE%D0%BB%D0%B0%D0%B4"
       ]
     }
   },
@@ -6027,7 +5966,7 @@
     "title": "Вологда",
     "year": 1976,
     "genre": "фолк-рок",
-    "youtube_url": "https://www.youtube.com/watch?v=wfMtyq3XWD0",
+    "youtube_url": "https://www.youtube.com/watch?v=FJAOnULBPpk",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -6048,7 +5987,7 @@
     "title": "Если не расстанемся",
     "year": 1979,
     "genre": "ВИА",
-    "youtube_url": "https://www.youtube.com/watch?v=gBP4ziF3GXs",
+    "youtube_url": "https://www.youtube.com/watch?v=9DJiddYApmo",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -6070,7 +6009,7 @@
     "title": "Как молоды мы были",
     "year": 1976,
     "genre": "рок-баллада",
-    "youtube_url": "https://www.youtube.com/watch?v=SkcsQ-nhiQ4",
+    "youtube_url": "https://www.youtube.com/watch?v=8orVrZhBMl0",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -6141,7 +6080,7 @@
     "title": "Песня о маме",
     "year": 1976,
     "genre": "саундтрек",
-    "youtube_url": "https://www.youtube.com/watch?v=Vi1jccYT8zI",
+    "youtube_url": "https://www.youtube.com/watch?v=6FJfCOeDcZQ",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -6164,7 +6103,7 @@
     "title": "Сентиментальная прогулка",
     "year": 1976,
     "genre": "рок",
-    "youtube_url": "https://www.youtube.com/watch?v=Y6sym-fPvl4",
+    "youtube_url": "https://www.youtube.com/watch?v=5Ap3Fr4T1bM",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -6187,7 +6126,7 @@
     "title": "Соловьиная роща",
     "year": 1974,
     "genre": "эстрада",
-    "youtube_url": "https://www.youtube.com/watch?v=7e7Bze_lkio",
+    "youtube_url": "https://www.youtube.com/watch?v=nWrrYGfxNFg",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -6206,14 +6145,14 @@
   },
   {
     "artist": "Аквариум",
-    "title": "Странные объекты между светом и тенью",
+    "title": "Странные объекты между светом и звуком",
     "year": 1981,
     "genre": "рок",
     "youtube_url": "https://www.youtube.com/watch?v=WVByXcc5bRk",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
-      "perplexity_comment": "Точная песня 'Странные объекты между светом и тенью' не найдена в поисковых результатах. Указан год и исполнитель на основе релиза альбома 'Странные новости с далёкой звезды' 16 января 2026 года (доступен в интернете), где она, вероятно, содержится[3][4][5][8]. Альтернативные даты релиза: 15 января[1].",
+      "perplexity_comment": "В целом вся подборка песен, записанных «Аквариумом» в течение зимы 1980—1981 годов, напоминала, по словам музыкантов, смесь «обломков старого и наступившего нового».",
       "perplexity_citations": [
         "https://myseldon.com/ru/news/index/340540219",
         "https://atma.press/artspace/bg_stg/",
@@ -6232,7 +6171,7 @@
     "title": "Ты мне не снишься",
     "year": 1976,
     "genre": "ВИА",
-    "youtube_url": "https://www.youtube.com/watch?v=Q58QqGADZnE",
+    "youtube_url": "https://www.youtube.com/watch?v=yVoi4SFo25Q",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -6254,7 +6193,7 @@
     "title": "У беды глаза зелёные",
     "year": 1979,
     "genre": "рок",
-    "youtube_url": "https://www.youtube.com/watch?v=1RVJyjHW8T8",
+    "youtube_url": "https://www.youtube.com/watch?v=_O0hu3Z5ghA",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -6456,7 +6395,7 @@
     "title": "Только тебе",
     "year": 1977,
     "genre": "поп",
-    "youtube_url": "https://www.youtube.com/watch?v=NYhCkWL5fXs",
+    "youtube_url": "https://www.youtube.com/watch?v=AL_Pb5GH3j4",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -6502,7 +6441,7 @@
     "title": "Эхо любви",
     "year": 1977,
     "genre": "эстрада",
-    "youtube_url": "https://www.youtube.com/watch?v=NWaKLkzRIBY",
+    "youtube_url": "https://www.youtube.com/watch?v=gaK71btbTCA",
     "embed_blocked": true,
     "embed_check_error": 150,
     "perplexity_content": {
@@ -6547,7 +6486,7 @@
     "title": "Алия",
     "year": 1977,
     "genre": "эстрада",
-    "youtube_url": "https://www.youtube.com/watch?v=sVIK2hUnGh0",
+    "youtube_url": "https://www.youtube.com/watch?v=DFNR0Ocrmbs",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -6569,11 +6508,11 @@
     "title": "Белый теплоход",
     "year": 1982,
     "genre": "ВИА",
-    "youtube_url": "https://www.youtube.com/watch?v=JVKN4lQwO7I",
+    "youtube_url": "https://www.youtube.com/watch?v=8aLrKwCpmZU",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
-      "perplexity_comment": "Официальный релиз песни произошел в 1982 году в исполнении ВИА \"Синяя птица\" (музыка Ю. Антонова, слова В. Дюнина, соло С. Дроздова). Указание на 'Надежда' в запросе, вероятно, ошибочно, так как поиск не выявил связи с группой 'Надежда'; также есть упоминания версий Юрия Антонова (современные) и Виктора Дюнина (1999), но первая публичная версия — 1982 год[2].",
+      "perplexity_comment": "Официальный релиз песни произошел в 1982 году в исполнении ВИА \"Синяя птица\" (музыка Ю. Антонова, слова В. Дюнина, соло С. Дроздова). Также есть упоминания версий Юрия Антонова (современные) и Виктора Дюнина (1999), но первая публичная версия — 1982 год[2].",
       "perplexity_citations": [
         "https://dzen.ru/list/music/kakogo-goda-pesnia-belyi-teplokhod",
         "https://ensembles.ru/song/belyj_teplohod",
@@ -6609,7 +6548,7 @@
     }
   },
   {
-    "artist": "Сябры",
+    "artist": "ВИА \"Сябры\"",
     "title": "Вы шумите, берёзы",
     "year": 1983,
     "genre": "ВИА",
@@ -6653,7 +6592,7 @@
     }
   },
   {
-    "artist": "ВИА Пламя",
+    "artist": "ВИА \"Пламя\"",
     "title": "Идёт солдат по городу",
     "year": 1976,
     "genre": "ВИА",
@@ -6674,7 +6613,7 @@
     }
   },
   {
-    "artist": "ВИА Верасы",
+    "artist": "ВИА \"Верасы\"",
     "title": "Малиновка",
     "year": 1979,
     "genre": "ВИА",
@@ -6720,7 +6659,7 @@
     }
   },
   {
-    "artist": "ВИА Пламя",
+    "artist": "ВИА \"Пламя\"",
     "title": "На дальней станции сойду",
     "year": 1976,
     "genre": "ВИА",
@@ -6770,7 +6709,7 @@
     "title": "Нет тебя прекрасней",
     "year": 1970,
     "genre": "поп",
-    "youtube_url": "https://www.youtube.com/watch?v=Od-a8mlOIZk",
+    "youtube_url": "https://www.youtube.com/watch?v=wzHHYttj-bM",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -6839,7 +6778,7 @@
     "title": "Берёзы",
     "year": 2002,
     "genre": "фолк-рок",
-    "youtube_url": "https://www.youtube.com/watch?v=8dVtBAWbZ14",
+    "youtube_url": "https://www.youtube.com/watch?v=3Y1mRBk6f2s",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -6980,7 +6919,7 @@
     "title": "Последняя поэма",
     "year": 1981,
     "genre": "саундтрек",
-    "youtube_url": "https://www.youtube.com/watch?v=qdWUekhHx8k",
+    "youtube_url": "https://www.youtube.com/watch?v=QRMaIer0fk0",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -7027,7 +6966,7 @@
     "title": "Старик Козлодоев",
     "year": 1981,
     "genre": "рок",
-    "youtube_url": "https://www.youtube.com/watch?v=Qd7Rvr-vf80",
+    "youtube_url": "https://www.youtube.com/watch?v=Vu9lOTqmdPM",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
