@@ -130,9 +130,8 @@
       border-radius: 46px;
       min-height: 308px;
       max-width: 1180px;
-      display: grid;
-      grid-template-columns: 1.7fr 1fr;
-      gap: 28px;
+      display: flex;
+      flex-direction: column;
       align-items: center;
       padding: 34px 38px;
       margin-bottom: 42px;
@@ -141,6 +140,8 @@
     .song-meta {
       font-size: clamp(26px, 2.8vw, 54px);
       line-height: 1.32;
+      text-align: center;
+      width: 100%;
     }
 
     .song-year {
@@ -148,6 +149,8 @@
       font-size: clamp(64px, 7vw, 170px);
       color: var(--success);
       line-height: 1;
+      order: -1;
+      margin-bottom: 28px;
     }
 
     .controls {
@@ -202,7 +205,6 @@
         grid-template-columns: 1fr 1fr;
       }
       .song-card {
-        grid-template-columns: 1fr;
         max-width: none;
       }
       .btn-primary { min-width: 0; width: 100%; }
@@ -225,11 +227,17 @@
 
       <div class="setup-row-wide">
         <div class="label">Ограничивать в секундах:</div>
-        <input class="input" id="clipSeconds" type="number" placeholder="например 20, оставьте пустым для отсутствия лимита" />
+        <input class="input" id="clipSeconds" type="number" placeholder="30" />
       </div>
 
       <div class="button-row-center">
         <button class="btn-primary" id="startGameBtn">Начать игру</button>
+      </div>
+
+      <div style="text-align: center; margin-top: 24px;">
+        <a href="chart.html" style="color: var(--muted); font-size: clamp(18px, 1.8vw, 36px); text-decoration: none; border-bottom: 2px solid var(--muted); padding-bottom: 4px; transition: opacity 0.2s ease;">
+          Показать распределение песен на диаграмме
+        </a>
       </div>
 
       <div class="status" id="setupStatus"></div>
@@ -238,20 +246,20 @@
     <section class="screen hidden" id="gameScreen">
       <h2 class="game-title" id="songCounter">Песня №1</h2>
 
+      <div class="controls" style="margin-bottom: 42px;">
+        <button class="btn-nav" id="prevBtn"><<</button>
+        <button class="btn-play" id="playPauseBtn">Старт / Пауза</button>
+        <button class="btn-answer" id="showAnswerBtn">Ответ</button>
+        <button class="btn-nav" id="nextBtn">>></button>
+      </div>
+
       <div class="song-card">
+        <div class="song-year" id="songYear">????</div>
         <div class="song-meta" id="songMeta">
           <div>Исполнитель: ???</div>
           <div>Название: ???</div>
           <div>Жанр: ???</div>
         </div>
-        <div class="song-year" id="songYear">????</div>
-      </div>
-
-      <div class="controls">
-        <button class="btn-nav" id="prevBtn">&lt;&lt;</button>
-        <button class="btn-play" id="playPauseBtn">Старт / Пауза</button>
-        <button class="btn-answer" id="showAnswerBtn">Показать ответ</button>
-        <button class="btn-nav" id="nextBtn">&gt;&gt;</button>
       </div>
 
       <div class="status" id="gameStatus"></div>
@@ -357,9 +365,36 @@
       if (!song) return;
 
       els.songCounter.textContent = `Песня №${state.currentIndex + 1}`;
-      els.songMeta.innerHTML = state.answerVisible
+
+      let metaHtml = state.answerVisible
         ? `<div>Исполнитель: ${song.artist ?? '—'}</div><div>Название: ${song.title ?? '—'}</div><div>Жанр: ${song.genre ?? '—'}</div>`
         : '<div>Исполнитель: ???</div><div>Название: ???</div><div>Жанр: ???</div>';
+
+      // Add perplexity content in a collapsible section after the year
+      if (state.answerVisible && song.perplexity_content) {
+        const { perplexity_comment, perplexity_citations } = song.perplexity_content;
+        const hasPerplexity = perplexity_comment || (Array.isArray(perplexity_citations) && perplexity_citations.length > 0);
+
+        if (hasPerplexity) {
+          let perplexityContent = '';
+          if (perplexity_comment) {
+            perplexityContent += `<div style="margin-bottom: 10px; font-size: clamp(16px, 1.5vw, 28px); color: var(--muted); line-height: 1.5;">${perplexity_comment}</div>`;
+          }
+          if (Array.isArray(perplexity_citations) && perplexity_citations.length > 0) {
+            const citationsHtml = perplexity_citations
+              .map((url, i) => `<a href="${url}" target="_blank" rel="noopener" style="color: var(--accent); font-size: clamp(14px, 1.2vw, 22px);">${i + 1}</a>`)
+              .join(' ');
+            perplexityContent += `<div style="font-size: clamp(14px, 1.2vw, 22px); color: var(--muted);">Источники: ${citationsHtml}</div>`;
+          }
+
+          metaHtml += `<details style="margin-top: 18px; border: 3px solid var(--border); border-radius: 16px; padding: 14px 18px; cursor: pointer;">
+            <summary style="font-size: clamp(16px, 1.5vw, 28px); color: var(--accent); outline: none; user-select: none;">Подробнее</summary>
+            <div style="margin-top: 14px;">${perplexityContent}</div>
+          </details>`;
+        }
+      }
+
+      els.songMeta.innerHTML = metaHtml;
       els.songYear.textContent = state.answerVisible ? (song.year ?? '—') : '????';
       els.showAnswerBtn.textContent = state.answerVisible ? 'Скрыть ответ' : 'Показать ответ';
       els.gameStatus.textContent = '';

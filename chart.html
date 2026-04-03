@@ -125,12 +125,12 @@
     <div class="card">
       <h1>Диаграмма распределения песен по годам</h1>
       <p class="subtitle">
-        Страница пытается автоматически загрузить файл <code>songs.resolved.json</code> из той же папки.
+        Страница пытается автоматически загрузить файл <code>songs.json</code> из той же папки.
         Если браузер блокирует чтение локального файла, выбери JSON вручную через кнопку ниже.
       </p>
 
       <div class="controls">
-        <button id="loadDefaultBtn">Загрузить songs.resolved.json</button>
+        <button id="loadDefaultBtn">Загрузить songs.json</button>
         <input id="fileInput" type="file" accept=".json,application/json" />
       </div>
 
@@ -291,9 +291,9 @@
     }
 
     async function loadDefaultFile() {
-      setStatus('Пробую загрузить songs.resolved.json…');
+      setStatus('Пробую загрузить songs.json…');
       try {
-        const response = await fetch('songs.resolved.json', { cache: 'no-store' });
+        const response = await fetch('songs.json', { cache: 'no-store' });
         if (!response.ok) {
           throw new Error(`HTTP ${response.status}`);
         }
@@ -301,7 +301,7 @@
         processSongs(json);
       } catch (error) {
         setStatus(
-          'Не удалось автоматически загрузить songs.resolved.json. Выбери файл вручную или открой HTML через локальный сервер.',
+          'Не удалось автоматически загрузить songs.json. Выбери файл вручную или открой HTML через локальный сервер.',
           true
         );
         console.error(error);
