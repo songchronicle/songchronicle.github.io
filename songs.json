@@ -17992,16 +17992,17 @@
   {
     "artist": "Отпетые мошенники",
     "title": "Люби меня, люби",
-    "year": 1998,
+    "year": 1999,
     "genre": "pop",
     "youtube_url": "https://www.youtube.com/watch?v=XOoNJPLlKjY",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
-      "perplexity_citations": []
-    },
-    "perplexity_raw_response": null,
-    "perplexity_error": "500 Server Error: Internal Server Error for url: https://api.perplexity.ai/v1/sonar"
+      "perplexity_comment": "Песня «Люби меня, люби» группы «Отпетые мошенники» вышла в 1999 году. Она стала одним из самых популярных хитов коллектива, а 1999 год считается пиковым для группы благодаря этой композиции.[1]",
+      "perplexity_citations": [
+        "https://ru.wikipedia.org/wiki/%D0%9E%D1%82%D0%BF%D0%B5%D1%82%D1%8B%D0%B5_%D0%BC%D0%BE%D1%88%D0%B5%D0%BD%D0%BD%D0%B8%D0%BA%D0%B8_(%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D0%B0)"
+      ]
+    }
   },
   {
     "artist": "Руки Вверх!",
@@ -18079,7 +18080,7 @@
     "title": "На сиреневой луне",
     "year": 1995,
     "genre": "pop",
-    "youtube_url": "https://www.youtube.com/watch?v=hSqAyOpBRUs",
+    "youtube_url": "https://youtu.be/hHCzavHlPFI?si=nqF4b-_EYW_r4tNT",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -18125,7 +18126,7 @@
     "title": "Ночной мотылёк",
     "year": 1993,
     "genre": "pop",
-    "youtube_url": "https://www.youtube.com/watch?v=F0mvcxFj1ro",
+    "youtube_url": "https://youtu.be/bqMCNd90tIA?si=2e8n5xF4y8JPFZ_E",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -18410,7 +18411,7 @@
     "title": "Не верь слезам",
     "year": 1998,
     "genre": "pop",
-    "youtube_url": "https://www.youtube.com/watch?v=ywfi6lPhgts",
+    "youtube_url": "https://youtu.be/tctc2fkqTwY?si=IQ3VkHMQOw5ZoL_S",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -18474,28 +18475,6 @@
     }
   },
   {
-    "artist": "Диана",
-    "title": "Я люблю тебя",
-    "year": 1998,
-    "genre": "pop",
-    "youtube_url": "https://www.youtube.com/watch?v=kYGgxWo9FEQ",
-    "embed_blocked": false,
-    "embed_check_error": null,
-    "perplexity_content": {
-      "perplexity_comment": "В предоставленных поисковых результатах не найдено информации о песне 'Диана - Я люблю тебя'. Результаты упоминают альбом Diana Росс (1980), видео Дианы Раджабовой 'I LOVE YOU' (2025), песню 'Диана' группы Reflex (1996), но ни один не соответствует указанному названию на русском языке. Точная дата выхода, исполнитель и официальное название не подтверждены источниками.",
-      "perplexity_citations": [
-        "https://ru.wikipedia.org/wiki/Diana_(%D0%B0%D0%BB%D1%8C%D0%B1%D0%BE%D0%BC)",
-        "https://yandex.kz/video/touch/preview/8829417119997930192?parent-reqid=1771695846216577-7739442129445698822-balancer-l7leveler-kubr-yp-vla-95-BAL",
-        "https://www.youtube.com/watch?v=LxwDa7lNQrg",
-        "https://www.1tv.ru/shows/golos-deti-novyy-sezon/vystupleniya/diana-bashilova-arlekino-slepye-proslushivaniya-golos-deti-vypusk-ot-26-09-2025",
-        "https://t.me/s/darbenina?after=703",
-        "https://deti.radiorus.ru/children/4306",
-        "https://yandex.kz/video/touch/preview/17886833821822411486?parent-reqid=1772314193426568-4050023294538160237-balancer-l7leveler-kubr-yp-klg-219-BAL&text=%D0%92%D0%B8%D0%B4%D0%B5%D0%BE%2B%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D1%8B%2B%D0%9A%D0%B0%D0%BB%D0%B8%D0%BD%D0%BA%D0%BE%D0%B2%D0%B8%D1%87%D0%B8%2B%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8",
-        "https://vk.com/clubdianabest"
-      ]
-    }
-  },
-  {
     "artist": "Мурат Насыров",
     "title": "Я — это ты, ты — это я",
     "year": 1998,
@@ -18543,7 +18522,7 @@
     "title": "2000 лет",
     "year": 1999,
     "genre": "dance-pop",
-    "youtube_url": "https://www.youtube.com/watch?v=ATDDDw1N_VU",
+    "youtube_url": "https://youtu.be/ye1iYyQ9-Tc?si=MnJvIICj-skZJ3V8",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -18567,7 +18546,7 @@
     "title": "30 минут",
     "year": 2001,
     "genre": "pop",
-    "youtube_url": "https://www.youtube.com/watch?v=rAqRC5vfvKw",
+    "youtube_url": "https://youtu.be/OlA-yDLffYk?si=4uh3LzcvmT_6v2qe",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -18811,7 +18790,7 @@
     "title": "Глухонемая любовь",
     "year": 1997,
     "genre": "pop",
-    "youtube_url": "https://www.youtube.com/watch?v=3NlFH6WZ6wo",
+    "youtube_url": "https://youtu.be/pWurn7bcZ6Q?si=oxMuG22tBo6LOxW1",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -19084,7 +19063,7 @@
     "title": "Иногда",
     "year": 1999,
     "genre": "pop",
-    "youtube_url": "https://www.youtube.com/watch?v=nMyBRkBHVLA",
+    "youtube_url": "https://youtu.be/33TWaIwk4O4?si=vs09bIYf6n7aTsIo",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -19446,7 +19425,7 @@
     "title": "Перепишу любовь",
     "year": 2001,
     "genre": "pop",
-    "youtube_url": "https://www.youtube.com/watch?v=SiAUFCnGTPI",
+    "youtube_url": "https://youtu.be/xae2OzFufBk?si=3Rzekqmjb2O5rk7W",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -19671,7 +19650,7 @@
     "title": "Ромео и Джульетта",
     "year": 2000,
     "genre": "pop",
-    "youtube_url": "https://www.youtube.com/watch?v=4LJqVYFGI6Q",
+    "youtube_url": "https://youtu.be/E2dv-0Eigu8?si=AIpzTrsgWTvrMwM5",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -19694,7 +19673,7 @@
     "title": "Ручки",
     "year": 1999,
     "genre": "dance-pop",
-    "youtube_url": "https://www.youtube.com/watch?v=5-qou2hgt2Q",
+    "youtube_url": "https://youtu.be/MBRjBa0yL1Q?si=vyDcIVkV4nHvLuoU",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -19764,7 +19743,7 @@
     "title": "Серебро",
     "year": 2000,
     "genre": "rock",
-    "youtube_url": "https://www.youtube.com/watch?v=SuYmcmurb2U",
+    "youtube_url": "https://youtu.be/5kX2Sm4URyw?si=FpfipdRbn9WM_rfj",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -19922,7 +19901,7 @@
     "title": "Тополя",
     "year": 2001,
     "genre": "rock",
-    "youtube_url": "https://www.youtube.com/watch?v=NJ7kol2Jh6w",
+    "youtube_url": "https://youtu.be/yXXZIkqiwz8?si=fUo7LdrCS9K14ZST",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -19987,7 +19966,7 @@
     "title": "Ты меня не ищи",
     "year": 1999,
     "genre": "dance-pop",
-    "youtube_url": "https://www.youtube.com/watch?v=hGqEMDRgJw8",
+    "youtube_url": "https://youtu.be/tak4vZBnrJA?si=xI9pVuFON7OaA3zx",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -20189,7 +20168,7 @@
     "title": "Ай-яй-яй",
     "year": 2000,
     "genre": "pop",
-    "youtube_url": "https://www.youtube.com/watch?v=JZiywmdMJM8",
+    "youtube_url": "https://youtu.be/fv_yz1f8oyw?si=hoP03lqWRVKk0jNn",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -20209,7 +20188,7 @@
   },
   {
     "artist": "Децл feat. Маруся",
-    "title": "Вечеринка у Децла",
+    "title": "Вечеринка",
     "year": 2000,
     "genre": "hip-hop",
     "youtube_url": "https://www.youtube.com/watch?v=NU-XAxBkEaE",
@@ -20326,7 +20305,7 @@
     "title": "Кто? Ты",
     "year": 2000,
     "genre": "hip-hop",
-    "youtube_url": "https://www.youtube.com/watch?v=-PwZQK4ezzg",
+    "youtube_url": "https://youtu.be/hOrZhPndto8?si=5l6nUKAfrvcAiUoo",
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
@@ -20832,28 +20811,6 @@
         "https://korol-i-shut.fandom.com/ru/wiki/%D0%A0%D0%BE%D0%BC",
         "https://vk.com/video-54896111_456241807",
         "https://vk.com/wall-19098508_131420"
-      ]
-    }
-  },
-  {
-    "artist": "Hi-Fi",
-    "title": "Средняя школа №7",
-    "year": 2002,
-    "genre": "pop",
-    "youtube_url": "https://www.youtube.com/watch?v=wO08MA2AXn8",
-    "embed_blocked": false,
-    "embed_check_error": null,
-    "perplexity_content": {
-      "perplexity_comment": "Песня вышла весной 2002 года[3]. У композиции несколько официальных названий: в дискографии коллектива она фигурирует под аббревиатурой «СШ №7» (расшифровывается как «Средняя школа №7»), но также известна как «А мы любили»[3]. Видеоклип был создан в апреле 2002 года[5]. Первоначальный состав исполнителей: Тимофей Пронькин, Митя Фомин и Оксана Олешко[3][5].",
-      "perplexity_citations": [
-        "https://www.youtube.com/watch?v=EPic9BLd7Sc",
-        "https://www.youtube.com/watch?v=JUq9ixRIqfQ",
-        "https://dzen.ru/a/YzwtsUIGOlBCLXTX",
-        "https://m.ok.ru/video/2104420403741",
-        "https://znanierussia.ru/articles/Hi-Fi_(%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D0%B0)",
-        "https://m.ok.ru/video/1639773047385",
-        "https://ru.wikipedia.org/wiki/Hi-Fi_(%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D0%B0)",
-        "https://vk.com/wall-145459583_42101"
       ]
     }
   },
