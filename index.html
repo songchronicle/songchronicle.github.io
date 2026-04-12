@@ -4,28 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Song Year Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #000000;
-      --text: #f2f2f2;
-      --muted: #b8b8b8;
-      --border: #6f6f6f;
-      --accent: #16b3b5;
-      --accent-2: #7d5cff;
-      --success: #37b114;
-      --danger: #d9534f;
-      --card-radius: 26px;
-      --control-radius: 18px;
+      --bg: #0a0a0a;
+      --surface: #141414;
+      --text: #e8e8e8;
+      --text-secondary: #a0a0a0;
+      --border: #2a2a2a;
+      --border-light: #333333;
+      --accent: #4a9eff;
+      --accent-hover: #3a8eef;
+      --accent-secondary: #7c6aef;
+      --success: #34c759;
+      --danger: #ff453a;
+      --card-radius: 12px;
+      --control-radius: 8px;
     }
 
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       background: var(--bg);
       color: var(--text);
       min-height: 100vh;
+      font-weight: 400;
+      letter-spacing: -0.01em;
     }
 
     .app {
@@ -35,14 +43,16 @@
     }
 
     .top-info {
-      font-size: clamp(24px, 3.1vw, 56px);
-      color: var(--muted);
+      font-size: clamp(18px, 2vw, 32px);
+      color: var(--text-secondary);
       margin: 8px 0 28px;
+      font-weight: 400;
     }
 
     .screen {
-      border: 6px solid var(--border);
-      border-radius: 26px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--card-radius);
       padding: 30px 34px 44px;
       min-height: 610px;
     }
@@ -52,9 +62,10 @@
     h1, h2, h3, p { margin: 0; }
 
     .title {
-      font-size: clamp(30px, 3.2vw, 62px);
+      font-size: clamp(36px, 5vw, 64px);
       margin-bottom: 48px;
-      font-weight: 400;
+      font-weight: 300;
+      letter-spacing: -0.02em;
     }
 
     .setup-grid {
@@ -67,23 +78,30 @@
     }
 
     .setup-grid .label {
-      font-size: clamp(28px, 2.6vw, 60px);
+      font-size: clamp(20px, 2vw, 36px);
       color: var(--text);
       white-space: nowrap;
+      font-weight: 400;
     }
 
     .input {
       width: 100%;
-      background: transparent;
+      background: var(--bg);
       color: var(--text);
-      border: 6px solid var(--border);
+      border: 1px solid var(--border);
       border-radius: var(--control-radius);
-      padding: 18px 24px;
-      font-size: clamp(24px, 2.2vw, 48px);
+      padding: 16px 20px;
+      font-size: clamp(18px, 1.8vw, 32px);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       outline: none;
+      transition: border-color 0.2s ease;
     }
 
-    .input::placeholder { color: #777; }
+    .input:focus {
+      border-color: var(--accent);
+    }
+
+    .input::placeholder { color: #555; }
 
     .setup-row-wide {
       display: grid;
@@ -94,6 +112,19 @@
       margin-bottom: 70px;
     }
 
+    .random-years-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--card-radius);
+      padding: 24px 28px;
+      margin-bottom: 40px;
+    }
+
+    .random-years-section .label {
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
     .button-row-center {
       display: flex;
       justify-content: center;
@@ -102,33 +133,52 @@
     button {
       border: none;
       cursor: pointer;
-      border-radius: 20px;
+      border-radius: var(--control-radius);
       color: white;
-      padding: 22px 34px;
-      font-size: clamp(24px, 2.4vw, 56px);
-      transition: transform 0.08s ease, opacity 0.2s ease;
+      padding: 16px 28px;
+      font-size: clamp(16px, 1.6vw, 28px);
+      font-weight: 500;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      transition: all 0.2s ease;
+      letter-spacing: -0.01em;
     }
 
-    button:hover { opacity: 0.95; }
-    button:active { transform: scale(0.99); }
-    button:disabled { opacity: 0.4; cursor: not-allowed; }
+    button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    button:active {
+      transform: translateY(0);
+    }
+    button:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
 
     .btn-primary {
       background: var(--accent);
-      min-width: 420px;
-      min-height: 102px;
+      min-width: 280px;
+      min-height: 60px;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
     }
 
     .game-title {
-      font-size: clamp(30px, 2.8vw, 56px);
+      font-size: clamp(24px, 3vw, 42px);
       margin-bottom: 40px;
-      font-weight: 400;
+      font-weight: 300;
+      letter-spacing: -0.01em;
     }
 
     .song-card {
-      border: 6px solid var(--border);
-      border-radius: 46px;
-      min-height: 308px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--card-radius);
+      min-height: 280px;
       max-width: 1180px;
       display: flex;
       flex-direction: column;
@@ -138,44 +188,52 @@
     }
 
     .song-meta {
-      font-size: clamp(26px, 2.8vw, 54px);
-      line-height: 1.32;
+      font-size: clamp(18px, 2vw, 32px);
+      line-height: 1.6;
       text-align: center;
       width: 100%;
+      font-weight: 400;
     }
 
     .song-year {
       text-align: center;
-      font-size: clamp(64px, 7vw, 170px);
+      font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+      font-size: clamp(48px, 8vw, 120px);
       color: var(--success);
       line-height: 1;
       order: -1;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
     }
 
     .controls {
       max-width: 1600px;
       display: grid;
-      grid-template-columns: 260px 1fr 1fr 240px;
-      gap: 26px;
+      grid-template-columns: 200px 1fr 1fr 180px;
+      gap: 16px;
       align-items: stretch;
     }
 
-    .btn-nav { background: var(--accent); min-height: 100px; }
-    .btn-play { background: var(--accent-2); min-height: 100px; }
-    .btn-answer { background: var(--success); min-height: 100px; }
+    .btn-nav { background: var(--accent); min-height: 56px; font-size: clamp(16px, 1.5vw, 24px); font-weight: 500; }
+    .btn-play { background: var(--accent-secondary); min-height: 56px; font-size: clamp(14px, 1.4vw, 22px); font-weight: 500; }
+    .btn-answer { background: var(--success); min-height: 56px; font-size: clamp(14px, 1.4vw, 22px); font-weight: 500; }
+    .btn-youtube { background: #FF0000; min-height: 56px; font-size: clamp(14px, 1.4vw, 22px); font-weight: 500; }
+    .btn-youtube:hover { background: #cc0000; }
 
     .status {
       margin-top: 24px;
-      color: var(--muted);
-      font-size: 24px;
+      color: var(--text-secondary);
+      font-size: 16px;
       min-height: 32px;
+      font-weight: 400;
     }
 
     .small-info {
       margin-top: 18px;
-      color: var(--muted);
-      font-size: 22px;
+      color: var(--text-secondary);
+      font-size: 14px;
+      font-weight: 400;
     }
 
     .danger { color: var(--danger); }
@@ -188,6 +246,83 @@
       height: 1px;
       opacity: 0;
       pointer-events: none;
+    }
+
+    /* Random Years Modal Styles */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-content {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--card-radius);
+      padding: 40px 50px;
+      max-width: 600px;
+      width: 90%;
+      text-align: center;
+      transform: scale(0.9);
+      transition: transform 0.3s ease;
+    }
+
+    .modal-overlay.active .modal-content {
+      transform: scale(1);
+    }
+
+    .modal-title {
+      font-size: clamp(24px, 3vw, 36px);
+      margin-bottom: 30px;
+      color: var(--text);
+      font-weight: 300;
+      letter-spacing: -0.01em;
+    }
+
+    .modal-years {
+      font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+      font-size: clamp(20px, 4vw, 36px);
+      color: var(--accent);
+      margin-bottom: 30px;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    .modal-close-btn {
+      background: var(--accent);
+      border: none;
+      color: white;
+      padding: 12px 32px;
+      font-size: clamp(14px, 1.5vw, 22px);
+      font-weight: 500;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      border-radius: var(--control-radius);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .modal-close-btn:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+    }
+
+    .modal-close-btn:active {
+      transform: translateY(0);
     }
 
     @media (max-width: 1100px) {
@@ -222,7 +357,7 @@
         <div class="label">Год с</div>
         <input class="input" id="yearFrom" type="number" value="1900" placeholder="например 1970" />
         <div class="label" style="text-align:center;">по</div>
-        <input class="input" id="yearTo" type="number" value="2030" placeholder="например 1990" />
+        <input class="input" id="yearTo" type="number" placeholder="например 1990" />
       </div>
 
       <div class="setup-row-wide">
@@ -230,12 +365,22 @@
         <input class="input" id="clipSeconds" type="number" placeholder="30" />
       </div>
 
+      <div class="setup-row-wide random-years-section">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center;">
+          <div class="label" style="font-size: clamp(20px, 1.8vw, 34px);">Количество:</div>
+          <input class="input" id="randomCount" type="number" value="3" style="font-size: clamp(20px, 1.8vw, 36px); padding: 14px 20px;" />
+        </div>
+        <div style="text-align: center; margin-top: 24px;">
+          <button class="btn-primary" id="randomYearsBtn" style="background: var(--accent-secondary); width: 100%; min-height: 70px; font-size: clamp(14px, 1.4vw, 24px); padding: 16px 28px;">Рандомные года</button>
+        </div>
+      </div>
+
       <div class="button-row-center">
-        <button class="btn-primary" id="startGameBtn">Начать игру</button>
+        <button class="btn-primary" id="startGameBtn" style="font-size: clamp(22px, 2.5vw, 42px); padding: 20px 36px; min-height: 80px;">Начать игру</button>
       </div>
 
       <div style="text-align: center; margin-top: 24px;">
-        <a href="chart.html" style="color: var(--muted); font-size: clamp(18px, 1.8vw, 36px); text-decoration: none; border-bottom: 2px solid var(--muted); padding-bottom: 4px; transition: opacity 0.2s ease;">
+        <a href="chart.html" style="color: var(--text-secondary); font-size: clamp(18px, 1.8vw, 36px); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 4px; transition: all 0.2s ease;">
           Показать распределение песен на диаграмме
         </a>
       </div>
@@ -260,10 +405,20 @@
           <div>Название: ???</div>
           <div>Жанр: ???</div>
         </div>
+        <button class="btn-youtube hidden" id="youtubeBtn" style="margin-top: 20px; width: auto; min-width: 200px;">YouTube</button>
       </div>
 
       <div class="status" id="gameStatus"></div>
     </section>
+  </div>
+
+  <!-- Random Years Modal -->
+  <div class="modal-overlay" id="randomYearsModal">
+    <div class="modal-content">
+      <div class="modal-title">Случайные года</div>
+      <div class="modal-years" id="modalYearsList"></div>
+      <button class="modal-close-btn" id="modalCloseBtn">Закрыть</button>
+    </div>
   </div>
 
   <div id="youtube-player"></div>
@@ -289,15 +444,21 @@
       clipSeconds: document.getElementById('clipSeconds'),
       setupStatus: document.getElementById('setupStatus'),
       startGameBtn: document.getElementById('startGameBtn'),
+      randomYearsBtn: document.getElementById('randomYearsBtn'),
+      randomCount: document.getElementById('randomCount'),
       songCounter: document.getElementById('songCounter'),
       songMeta: document.getElementById('songMeta'),
       songYear: document.getElementById('songYear'),
       showAnswerBtn: document.getElementById('showAnswerBtn'),
+      youtubeBtn: document.getElementById('youtubeBtn'),
       prevBtn: document.getElementById('prevBtn'),
       nextBtn: document.getElementById('nextBtn'),
       playPauseBtn: document.getElementById('playPauseBtn'),
       gameStatus: document.getElementById('gameStatus'),
-      gameInfo: document.getElementById('gameInfo')
+      gameInfo: document.getElementById('gameInfo'),
+      randomYearsModal: document.getElementById('randomYearsModal'),
+      modalYearsList: document.getElementById('modalYearsList'),
+      modalCloseBtn: document.getElementById('modalCloseBtn')
     };
 
     let player = null;
@@ -378,16 +539,16 @@
         if (hasPerplexity) {
           let perplexityContent = '';
           if (perplexity_comment) {
-            perplexityContent += `<div style="margin-bottom: 10px; font-size: clamp(16px, 1.5vw, 28px); color: var(--muted); line-height: 1.5;">${perplexity_comment}</div>`;
+            perplexityContent += `<div style="margin-bottom: 10px; font-size: clamp(16px, 1.5vw, 28px); color: var(--text-secondary); line-height: 1.5;">${perplexity_comment}</div>`;
           }
           if (Array.isArray(perplexity_citations) && perplexity_citations.length > 0) {
             const citationsHtml = perplexity_citations
               .map((url, i) => `<a href="${url}" target="_blank" rel="noopener" style="color: var(--accent); font-size: clamp(14px, 1.2vw, 22px);">${i + 1}</a>`)
               .join(' ');
-            perplexityContent += `<div style="font-size: clamp(14px, 1.2vw, 22px); color: var(--muted);">Источники: ${citationsHtml}</div>`;
+            perplexityContent += `<div style="font-size: clamp(14px, 1.2vw, 22px); color: var(--text-secondary);">Источники: ${citationsHtml}</div>`;
           }
 
-          metaHtml += `<details style="margin-top: 18px; border: 3px solid var(--border); border-radius: 16px; padding: 14px 18px; cursor: pointer;">
+          metaHtml += `<details style="margin-top: 18px; border: 1px solid var(--border); border-radius: var(--control-radius); padding: 14px 18px; cursor: pointer;">
             <summary style="font-size: clamp(16px, 1.5vw, 28px); color: var(--accent); outline: none; user-select: none;">Подробнее</summary>
             <div style="margin-top: 14px;">${perplexityContent}</div>
           </details>`;
@@ -397,6 +558,14 @@
       els.songMeta.innerHTML = metaHtml;
       els.songYear.textContent = state.answerVisible ? (song.year ?? '—') : '????';
       els.showAnswerBtn.textContent = state.answerVisible ? 'Скрыть ответ' : 'Показать ответ';
+      
+      // Show/hide YouTube button based on answer visibility
+      if (state.answerVisible && song.youtube_url) {
+        els.youtubeBtn.classList.remove('hidden');
+      } else {
+        els.youtubeBtn.classList.add('hidden');
+      }
+      
       els.gameStatus.textContent = '';
       updateNavButtons();
     }
@@ -463,14 +632,14 @@
       }
 
       clearClipTimer();
-      player.loadVideoById({ videoId, startSeconds: 0 });
       if (autoPlay) {
+        player.loadVideoById({ videoId, startSeconds: 0 });
         player.playVideo();
         state.isPlaying = true;
         scheduleClipStop();
         els.gameStatus.textContent = 'Играет фрагмент песни.';
       } else {
-        player.pauseVideo();
+        player.cueVideoById({ videoId, startSeconds: 0 });
         state.isPlaying = false;
       }
     }
@@ -492,12 +661,15 @@
 
       const playerState = player.getPlayerState();
       if (playerState === YT.PlayerState.PLAYING) {
-        stopPlayback();
+        // Pause the video
+        player.pauseVideo();
+        clearClipTimer();
+        state.isPlaying = false;
         els.gameStatus.textContent = 'Пауза.';
         return;
       }
 
-      player.loadVideoById({ videoId, startSeconds: 0 });
+      // If video is paused or stopped, resume/start playback
       player.playVideo();
       state.isPlaying = true;
       els.gameStatus.textContent = 'Играет фрагмент песни.';
@@ -515,6 +687,7 @@
       state.currentIndex = nextIndex;
       state.answerVisible = false;
       renderCurrentSong();
+      loadCurrentSongToPlayer(false);
     }
 
     function onYouTubeIframeAPIReady() {
@@ -560,13 +733,96 @@
       }
     }
 
+    // Random Years Modal functions
+    function showRandomYearsModal() {
+      const from = Number(els.yearFrom.value);
+      const to = Number(els.yearTo.value);
+      const count = Number(els.randomCount.value);
+
+      // Validation
+      if (!Number.isFinite(from) || !Number.isFinite(to)) {
+        els.setupStatus.textContent = 'Нужно заполнить оба года (Год с и Год по).';
+        els.setupStatus.classList.add('danger');
+        return;
+      }
+
+      if (from > to) {
+        els.setupStatus.textContent = 'Год "с" не может быть больше года "по".';
+        els.setupStatus.classList.add('danger');
+        return;
+      }
+
+      if (!Number.isFinite(count) || count < 1) {
+        els.setupStatus.textContent = 'Количество должно быть больше 0.';
+        els.setupStatus.classList.add('danger');
+        return;
+      }
+
+      // Limit count to reasonable value
+      const limitedCount = Math.min(count, 50);
+      if (count > 50) {
+        els.setupStatus.textContent = `Количество ограничено до 50.`;
+        els.setupStatus.classList.remove('danger');
+      } else {
+        els.setupStatus.textContent = '';
+        els.setupStatus.classList.remove('danger');
+      }
+
+      // Generate random years
+      const years = [];
+      const range = to - from + 1;
+
+      // If requested count is more than available years in range, just use all years shuffled
+      if (limitedCount >= range) {
+        for (let y = from; y <= to; y++) {
+          years.push(y);
+        }
+        shuffle(years);
+      } else {
+        // Generate unique random years
+        const used = new Set();
+        while (years.length < limitedCount) {
+          const randomYear = from + Math.floor(Math.random() * range);
+          if (!used.has(randomYear)) {
+            used.add(randomYear);
+            years.push(randomYear);
+          }
+        }
+      }
+
+      // Display in modal
+      els.modalYearsList.textContent = years.join(', ');
+      els.randomYearsModal.classList.add('active');
+    }
+
+    function closeRandomYearsModal() {
+      els.randomYearsModal.classList.remove('active');
+    }
+
     window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
 
     els.startGameBtn.addEventListener('click', startGame);
+    els.randomYearsBtn.addEventListener('click', showRandomYearsModal);
+    els.modalCloseBtn.addEventListener('click', closeRandomYearsModal);
+    els.randomYearsModal.addEventListener('click', (e) => {
+      // Close modal when clicking on overlay (outside content)
+      if (e.target === els.randomYearsModal) {
+        closeRandomYearsModal();
+      }
+    });
     els.showAnswerBtn.addEventListener('click', showOrHideAnswer);
+    els.youtubeBtn.addEventListener('click', () => {
+      const song = state.gameSongs[state.currentIndex];
+      if (song && song.youtube_url) {
+        window.open(song.youtube_url, '_blank', 'noopener,noreferrer');
+      }
+    });
     els.prevBtn.addEventListener('click', () => goToSong(state.currentIndex - 1));
     els.nextBtn.addEventListener('click', () => goToSong(state.currentIndex + 1));
     els.playPauseBtn.addEventListener('click', togglePlayPause);
+
+    // Set current year as default for "yearTo" field
+    els.yearTo.value = new Date().getFullYear();
 
     loadSongs();
   </script>
