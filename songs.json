@@ -1726,10 +1726,9 @@
     "embed_blocked": false,
     "embed_check_error": null,
     "perplexity_content": {
-      "perplexity_citations": []
-    },
-    "perplexity_raw_response": null,
-    "perplexity_error": "Expecting ',' delimiter: line 5 column 401 (char 525)"
+      "perplexity_comment": "«Марш монтажников» («Не кочегары мы, не плотники») в исполнении Николая Рыбникова впервые вышел в 1957 году в составе советского художественного фильма «Высота».",
+      "perplexity_citations": ["https://vk.com/wall-61357277_758173#:~:text=%C2%AB%D0%9C%D0%B0%D1%80%D1%88%20%D0%BC%D0%BE%D0%BD%D1%82%D0%B0%D0%B6%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%C2%BB%20%E2%80%93%20%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9%20%D0%A0%D1%8B%D0%B1%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2.%20%D0%9F%D0%B5%D1%81%D0%BD%D1%8F%20%D0%B8%D0%B7%20%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%B0%20%C2%AB%D0%92%D1%8B%D1%81%D0%BE%D1%82%D0%B0%C2%BB%2C%201957%20%D0%B3%D0%BE%D0%B4."]
+    }
   },
   {
     "artist": "Лев Барашков",
@@ -1835,9 +1834,7 @@
       "perplexity_citations": [
         "https://ru.wikipedia.org/wiki/%D0%AF_%D0%BB%D1%8E%D0%B1%D0%BB%D1%8E_%D1%82%D0%B5%D0%B1%D1%8F,_%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C"
       ]
-    },
-    "perplexity_raw_response": null,
-    "perplexity_error": "Expecting ',' delimiter: line 5 column 335 (char 450)"
+    }
   },
   {
     "artist": "Муслим Магомаев",
@@ -26414,7 +26411,7 @@
     "title": "Бессонница",
     "year": 2012,
     "genre": "pop",
-    "youtube_url": "https://www.youtube.com/watch?v=qVYWMuIX4lE",
+    "youtube_url": "https://youtu.be/P4RRFG3wN2E?si=HzCEXRKSVvLQeTr4",
     "embed_blocked": true,
     "embed_check_error": 150,
     "perplexity_content": {
