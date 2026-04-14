@@ -604,6 +604,26 @@
         return;
       }
 
+      // Check if YouTube player is ready
+      if (!state.playerReady) {
+        els.setupStatus.textContent = 'Инициализация YouTube плеера... Пожалуйста, подождите.';
+        els.setupStatus.classList.remove('danger');
+        
+        // Wait for player to be ready, then start the game
+        const checkPlayerReady = setInterval(() => {
+          if (state.playerReady) {
+            clearInterval(checkPlayerReady);
+            startGameInternal(from, to, clipSeconds, filtered);
+          }
+        }, 100); // Check every 100ms
+        
+        return;
+      }
+
+      startGameInternal(from, to, clipSeconds, filtered);
+    }
+
+    function startGameInternal(from, to, clipSeconds, filtered) {
       state.clipSeconds = clipSeconds > 0 ? clipSeconds : 0;
       state.gameSongs = shuffle(filtered).slice(0, 100).map(song => ({
         ...song,
@@ -616,6 +636,8 @@
       stopPlayback();
       showGameScreen();
       renderCurrentSong();
+      // Load the first song to player after game starts
+      loadCurrentSongToPlayer(false);
     }
 
     function loadCurrentSongToPlayer(autoPlay = false) {
