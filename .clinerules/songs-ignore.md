@@ -1,6 +1,6 @@
-Never read the file `songs.json`.
+Never read the file `songs.json` or `songs_foreign.json`.
 
-It contains an array of songs with the following structure:
+Both files contain an array of songs with the following structure:
 ~~~json
 [
   {

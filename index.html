@@ -125,6 +125,84 @@
       letter-spacing: -0.01em;
     }
 
+    .database-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--card-radius);
+      padding: 24px 28px;
+      margin-bottom: 40px;
+    }
+
+    .database-section .section-title {
+      font-size: clamp(20px, 1.8vw, 34px);
+      color: var(--text);
+      font-weight: 500;
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    .database-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+    }
+
+    .checkbox-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      cursor: pointer;
+      user-select: none;
+      font-size: clamp(18px, 1.6vw, 30px);
+      color: var(--text);
+      font-weight: 400;
+      padding: 6px 0;
+    }
+
+    .checkbox-label input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .checkbox-custom {
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      border: 2px solid var(--border-light);
+      border-radius: 6px;
+      background: var(--bg);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .checkbox-label:hover .checkbox-custom {
+      border-color: var(--accent);
+    }
+
+    .checkbox-label input[type="checkbox"]:checked + .checkbox-custom {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .checkbox-label input[type="checkbox"]:checked + .checkbox-custom::after {
+      content: '';
+      width: 8px;
+      height: 14px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg) translate(-1px, -1px);
+    }
+
+    .checkbox-label input[type="checkbox"]:focus-visible + .checkbox-custom {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
     .button-row-center {
       display: flex;
       justify-content: center;
@@ -353,6 +431,22 @@
     <section class="screen" id="setupScreen">
       <h1 class="title">Новая Игра</h1>
 
+      <div class="database-section">
+        <div class="section-title">База песен:</div>
+        <div class="database-options">
+          <label class="checkbox-label">
+            <input type="checkbox" id="dbRussian" value="songs.json" checked />
+            <span class="checkbox-custom"></span>
+            <span>Русские песни</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" id="dbForeign" value="songs_foreign.json" />
+            <span class="checkbox-custom"></span>
+            <span>Иностранные песни</span>
+          </label>
+        </div>
+      </div>
+
       <div class="setup-grid">
         <div class="label">Год с</div>
         <input class="input" id="yearFrom" type="number" value="1900" placeholder="например 1970" />
@@ -432,8 +526,15 @@
       clipSeconds: 20,
       clipTimerId: null,
       playerReady: false,
-      isPlaying: false
+      isPlaying: false,
+      loadedDbs: '' // signature of currently loaded set of databases
     };
+
+    // Database configuration
+    const DATABASES = [
+      { id: 'dbRussian', file: 'songs.json', label: 'Русские песни' },
+      { id: 'dbForeign', file: 'songs_foreign.json', label: 'Иностранные песни' }
+    ];
 
     const els = {
       baseCount: document.getElementById('baseCount'),
@@ -446,6 +547,8 @@
       startGameBtn: document.getElementById('startGameBtn'),
       randomYearsBtn: document.getElementById('randomYearsBtn'),
       randomCount: document.getElementById('randomCount'),
+      dbRussian: document.getElementById('dbRussian'),
+      dbForeign: document.getElementById('dbForeign'),
       songCounter: document.getElementById('songCounter'),
       songMeta: document.getElementById('songMeta'),
       songYear: document.getElementById('songYear'),
@@ -580,7 +683,7 @@
       els.gameScreen.classList.remove('hidden');
     }
 
-    function startGame() {
+    async function startGame() {
       const from = Number(els.yearFrom.value);
       const to = Number(els.yearTo.value);
       const clipSeconds = Number(els.clipSeconds.value || 0);
@@ -595,6 +698,30 @@
         els.setupStatus.textContent = 'Год "с" не может быть больше года "по".';
         els.setupStatus.classList.add('danger');
         return;
+      }
+
+      const selectedDbs = getSelectedDatabases();
+      if (selectedDbs.length === 0) {
+        els.setupStatus.textContent = 'Выберите хотя бы одну базу песен.';
+        els.setupStatus.classList.add('danger');
+        return;
+      }
+
+      // Load selected databases (will be skipped if already loaded)
+      const signature = selectedDbs.map(d => d.file).sort().join('|');
+      if (signature !== state.loadedDbs || state.allSongs.length === 0) {
+        els.setupStatus.textContent = 'Загрузка выбранных баз песен...';
+        els.setupStatus.classList.remove('danger');
+        els.startGameBtn.disabled = true;
+        try {
+          await loadSongs(selectedDbs);
+        } catch (err) {
+          els.setupStatus.textContent = 'Не удалось загрузить выбранные базы.';
+          els.setupStatus.classList.add('danger');
+          els.startGameBtn.disabled = false;
+          return;
+        }
+        els.startGameBtn.disabled = false;
       }
 
       const filtered = state.allSongs.filter(song => Number(song.year) >= from && Number(song.year) <= to);
@@ -742,16 +869,61 @@
       });
     }
 
-    async function loadSongs() {
+    function getSelectedDatabases() {
+      return DATABASES.filter(db => {
+        const cb = els[db.id];
+        return cb && cb.checked;
+      });
+    }
+
+    async function loadSongs(selectedDbs) {
+      const dbs = selectedDbs && selectedDbs.length ? selectedDbs : getSelectedDatabases();
+      const signature = dbs.map(d => d.file).sort().join('|');
+
+      // Skip reload if exactly the same set is already loaded
+      if (signature && signature === state.loadedDbs && state.allSongs.length > 0) {
+        return state.allSongs;
+      }
+
+      els.baseCount.textContent = 'Загрузка базы песен...';
+
       try {
-        const response = await fetch('songs.json');
-        if (!response.ok) throw new Error('Failed to load songs.json');
-        const songs = await response.json();
-        state.allSongs = songs;
+        const responses = await Promise.all(dbs.map(db => fetch(db.file)));
+        const allLoaded = [];
+        for (let i = 0; i < responses.length; i++) {
+          const resp = responses[i];
+          if (!resp.ok) throw new Error(`Failed to load ${dbs[i].file}`);
+          const songs = await resp.json();
+          if (Array.isArray(songs)) {
+            allLoaded.push(...songs);
+          }
+        }
+        state.allSongs = allLoaded;
+        state.loadedDbs = signature;
         updateBaseCount();
+        return state.allSongs;
       } catch (err) {
-        console.error('Error loading songs.json:', err);
-        els.baseCount.textContent = 'Ошибка загрузки songs.json';
+        console.error('Error loading song databases:', err);
+        els.baseCount.textContent = 'Ошибка загрузки базы песен';
+        state.allSongs = [];
+        state.loadedDbs = '';
+        throw err;
+      }
+    }
+
+    function updateBaseCountForSelection() {
+      // Don't change actual loaded data, just update UI hint based on selection
+      const dbs = getSelectedDatabases();
+      if (dbs.length === 0) {
+        els.baseCount.textContent = 'Выберите хотя бы одну базу песен';
+        return;
+      }
+      // If signature matches what's loaded, show real count
+      const signature = dbs.map(d => d.file).sort().join('|');
+      if (signature === state.loadedDbs) {
+        updateBaseCount();
+      } else {
+        els.baseCount.textContent = 'Нажмите «Начать игру» для загрузки выбранных баз';
       }
     }
 
@@ -843,10 +1015,19 @@
     els.nextBtn.addEventListener('click', () => goToSong(state.currentIndex + 1));
     els.playPauseBtn.addEventListener('click', togglePlayPause);
 
+    // Update base count info when database selection changes
+    DATABASES.forEach(db => {
+      const cb = els[db.id];
+      if (cb) {
+        cb.addEventListener('change', updateBaseCountForSelection);
+      }
+    });
+
     // Set current year as default for "yearTo" field
     els.yearTo.value = new Date().getFullYear();
 
-    loadSongs();
+    // Load songs for the initially selected databases
+    loadSongs().catch(() => { /* error already shown */ });
   </script>
 </body>
 </html>
